@@ -149,7 +149,7 @@ table.sched th{font-size:10.5px}
 .rmeta .ico{width:12px;height:12px}
 .asearch{display:flex;gap:6px;align-items:center}
 .asearch input,.sesearch input{border:1px solid var(--line);border-radius:8px;padding:5px 9px;font-size:12.5px;background:var(--surface);min-width:0}
-.asearch input{width:260px}
+.asearch input{width:200px}
 .sesearch{display:flex;gap:5px;padding:8px 10px;border-bottom:1px solid var(--line)}
 .sesearch input{flex:1}
 .ltabs{padding:8px 12px;border-bottom:1px solid var(--line);display:grid;gap:6px;background:var(--surface)}
@@ -161,6 +161,107 @@ table.sched th{font-size:10.5px}
 .qrbar{padding:8px 12px 0;display:grid;gap:6px;border-top:1px solid var(--line)}
 .qrtog{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:2px 0;cursor:pointer;color:var(--muted)}
 .qrtog .chev{font-size:11px}
+.strip-r{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.vtog{display:inline-flex;border:1px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden}
+.vtog button{border:0;background:none;color:inherit;font-weight:700;font-size:11.5px;padding:4px 10px;display:inline-flex;gap:5px;align-items:center;opacity:.75}
+.vtog button .ico{width:14px;height:14px}
+.vtog button[aria-pressed="true"]{background:rgba(255,255,255,.2);opacity:1}
+.bellbar{border-bottom:1px solid var(--line);padding:8px 14px;background:var(--surface-2)}
+.bellbtn{position:relative;display:inline-grid;place-items:center;width:34px;height:34px;flex:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;color:var(--ink)}
+.bellbtn .badge{position:absolute;top:-6px;right:-7px}
+.bellbtn .ico{color:var(--accent);width:17px;height:17px}
+.bellbtn[aria-expanded="true"]{background:var(--accent-soft)}
+.bellpanel{margin-top:8px;display:grid;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px}
+.bell-i{display:flex;justify-content:space-between;gap:8px;align-items:center;width:100%;border:0;border-top:1px solid var(--line);background:none;padding:7px 0 2px;text-align:left}
+.bell-i>span{display:grid;gap:1px;min-width:0}
+.bell-i b{font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bell-i small{font-size:11px;color:var(--muted)}
+/* admin web in Mobile view (and on real phones) */
+.admin.mview{justify-self:center;width:100%;max-width:400px;height:820px;border:9px solid var(--strip);border-radius:30px}
+.admin.mview .adm-top nav button{padding:7px 9px}
+.admin.mview .adm-top nav button>span:not(.badge){display:none}
+.admin.mview .adm-top{padding:8px 10px;gap:6px}
+.admin.mview .asearch input{width:110px}
+.admin.mview .split,.admin.mview .room-grid{grid-template-columns:1fr}
+.admin.mview .list{max-height:230px;border-right:0;border-bottom:1px solid var(--line)}
+.admin.mview .addrow{grid-template-columns:1fr 1fr}
+.admin.mview .row2{grid-template-columns:1fr}
+.admin.mview .strip{padding:9px 12px}
+@media (max-width:600px){
+  .adm-top nav button>span:not(.badge){display:none}
+  .adm-top nav button{padding:7px 9px}
+  .asearch input{width:110px}
+  .addrow,.row2{grid-template-columns:1fr}
+}
+.mbar{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.mbar b{font-size:14px;margin-left:4px}
+.mcal{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.mhead,.mgrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.mhead span{font-size:11.5px;color:var(--muted);padding:6px 8px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.mc{min-height:86px;border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);text-align:left;padding:6px 7px;display:flex;flex-direction:column;gap:3px;align-items:flex-start;font:inherit;color:var(--ink)}
+.mc:nth-child(7n){border-right:0}
+.mc.out{color:var(--faint);background:var(--surface-2)}
+.mc.go{cursor:pointer}.mc.go:hover{background:var(--accent-soft)}
+.caselnk{border:0;background:var(--accent-soft);color:var(--accent);font-family:var(--f-mono);font-size:10px;font-weight:700;border-radius:4px;padding:1px 5px;cursor:pointer;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.caselnk:hover{background:var(--accent);color:#fff}
+.cases{display:flex;flex-wrap:wrap;gap:3px;margin-top:3px}
+.admin.mview .mc .caselnk{font-size:8.5px;padding:0 2px}
+.mc-d{font-size:12px;font-weight:600}
+.mc.today .mc-d{background:var(--accent);color:#fff;border-radius:999px;padding:0 7px}
+.mpill{font-size:10.5px;font-weight:700;border-radius:5px;padding:1px 6px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mpill.rep{background:var(--warn-bg);color:var(--warn)}
+.mpill.ins{background:var(--accent-soft);color:var(--accent)}
+.agenda{display:grid;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.ag-row{display:grid;grid-template-columns:52px minmax(0,1fr);border-bottom:1px solid var(--line)}
+.ag-row:last-child{border-bottom:0}
+.ag-h{font-size:11.5px;font-weight:700;color:var(--muted);padding:8px 6px;background:var(--surface-2);font-family:var(--f-mono)}
+.ag-cells{display:flex;flex-wrap:wrap;gap:5px;padding:6px}
+.agc{display:inline-flex;align-items:center;gap:4px;border-radius:7px;padding:3px 7px;font-size:11px}
+.agc .ico{width:13px;height:13px}
+.agc small{font-size:10px}
+.agc .iconbtn{width:20px;height:20px;font-size:13px}
+.aglegend{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:11px;color:var(--muted)}
+.aglegend span{display:inline-flex;gap:4px;align-items:center}.aglegend .ico{width:13px;height:13px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
+.kpi{border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:grid;gap:4px;background:var(--surface)}
+.kpi.soft{background:var(--surface-2)}
+.kpi-l{display:flex;gap:6px;align-items:center;font-size:11.5px;color:var(--muted);font-weight:600}
+.kpi-l .ico{width:14px;height:14px;color:var(--accent)}
+.kpi b{font-size:22px;line-height:1.1}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.bars{display:grid;gap:6px}
+.bar-r{display:grid;grid-template-columns:minmax(90px,38%) minmax(0,1fr) 30px;gap:8px;align-items:center;font-size:12px}
+.bar-l{display:flex;gap:5px;align-items:center;min-width:0}.bar-l span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-l .ico{width:13px;height:13px;color:var(--accent);flex:none}
+.bar-t{height:10px;background:var(--surface-2);border-radius:5px;overflow:hidden}
+.bar-t i{display:block;height:100%;background:var(--accent);border-radius:5px}
+.bar-r b{text-align:right;font-size:12px}
+.trend{display:flex;align-items:flex-end;gap:2px;height:110px;padding-top:6px}
+.trend span{flex:1;height:100%;display:flex;align-items:flex-end}
+.trend i{display:block;width:100%;background:var(--accent);border-radius:3px 3px 0 0;min-height:2px}
+.trend-x{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+.repf{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.repf label{display:grid;gap:4px;font-size:12px;font-weight:700}
+.repx{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.admin.mview .mc{min-height:58px;padding:4px}
+.admin.mview .mpill{font-size:9px;padding:1px 3px}
+.admin.mview .mhead span{padding:5px 4px;font-size:10.5px}
+.admin.mview .strip{display:grid;gap:6px}
+.admin.mview .strip-r{flex-wrap:nowrap;gap:6px;min-width:0}
+.admin.mview .strip-r .se-role{flex:1;min-width:0;flex-wrap:nowrap;gap:4px}
+.admin.mview .strip-r .se-role select{min-width:0;flex:1;max-width:none}
+.admin.mview .strip-r .se-role>.ico{flex:none}
+.admin.mview .strip-r .se-role .tip{display:none}
+.admin.mview .vtog{flex:none}
+.admin.mview .vtog button{padding:4px 8px}
+.foldrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.foldh{display:inline-flex;align-items:center;gap:7px;background:none;border:0;padding:2px 0;cursor:pointer;font-weight:700;font-size:13px;color:var(--ink)}
+.foldh>.ico{color:var(--accent)}
+.foldh .chev{font-size:11px;color:var(--muted)}
+.ri-tk{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;border:0;border-top:1px solid var(--line);background:none;padding:8px 0 2px;text-align:left;margin-top:6px}
+.ri-tk span{display:grid;gap:1px;min-width:0}
+.ri-tk b{font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ri-tk small{font-size:11px;color:var(--muted)}
 .qrbar .qchips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}
 .qredit{display:grid;gap:5px;max-height:150px;overflow-y:auto}
 .qredit div{display:flex;gap:5px}
@@ -238,6 +339,10 @@ button.fcard:hover{background:var(--accent-soft)}
 .sticker .qr-sm{background:var(--qr-bg);border:1px solid var(--line);border-radius:8px;padding:6px;width:112px;height:112px;display:grid;place-items:center}
 .sticker .qr-sm img,.sticker .qr-sm canvas{width:98px!important;height:98px!important}
 .sticker b{font-size:12.5px;display:block}
+.ibtn.tel{font-size:11.5px;color:var(--muted)}
+.sticker.none{border-style:dashed;opacity:.85}
+.sticker .qr-ph{color:var(--faint)}
+.sticker .qr-ph svg{width:40px;height:40px}
 .sticker p{font-size:11.5px;color:var(--muted);margin:3px 0 8px}
 
 .liff{position:absolute;inset:30px 0 0;background:var(--surface-2);border-radius:15px 15px 0 0;display:flex;flex-direction:column;box-shadow:0 -6px 24px rgba(0,0,0,.18);animation:up .2s ease-out}
@@ -287,6 +392,7 @@ button.fcard:hover{background:var(--accent-soft)}
 .state-hero{text-align:center;display:grid;gap:7px;justify-items:center;padding:16px 6px}
 .state-ic{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:18px;font-weight:700}
 .state-ic.bad{background:var(--bad-bg);color:var(--bad)}.state-ic.warn{background:var(--warn-bg);color:var(--warn)}.state-ic.info{background:var(--accent-soft);color:var(--accent)}
+.state-ic.ok{background:var(--ok-bg);color:var(--ok)}
 .stepper{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
 .stepper div{font-size:10px;text-align:center;color:var(--muted);padding-top:5px;border-top:3px solid var(--line);line-height:1.2}
 .stepper div.on{color:var(--accent);border-top-color:var(--accent);font-weight:700}
@@ -315,8 +421,13 @@ button.fcard:hover{background:var(--accent-soft)}
 .dates input{width:auto}
 
 /* admin web */
-.adm-top{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.adm-top nav{display:flex;gap:4px;flex-wrap:wrap}
+.adm-top{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 14px;border-bottom:1px solid var(--line);flex-wrap:nowrap}
+.adm-top nav{display:flex;gap:2px;flex-wrap:nowrap;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.adm-top nav button{flex:none;white-space:nowrap}
+/* tab names: only the open tab shows its label, the rest are icons (name on hover) */
+.adm-top nav button:not([aria-current="true"])>span:not(.badge){display:none}
+.adm-top nav button:not([aria-current="true"]){padding:7px 9px}
+.asearch{flex:none}
 .adm-top nav button{border:0;background:none;padding:7px 12px;border-radius:9px;font-weight:700;font-size:13px;color:var(--muted);display:flex;gap:6px;align-items:center}
 .adm-top nav button[aria-current="true"]{background:var(--accent-soft);color:var(--accent)}
 .adm-who{font-size:11.5px;color:var(--muted)}
@@ -433,7 +544,7 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
   <header class="top" id="hdr"></header>
   <div class="ctrl" id="ctrl"></div>
   <div class="stage">
-    <section class="pane phone-pane"><div class="strip" id="strip-line"></div><div class="phone-wrap"><div class="phone" id="phone"></div></div></section>
+    <section class="pane phone-pane"><div class="strip" id="strip-line"></div><div class="phone-wrap"><div class="phone" id="phone"></div><div class="sticker" id="sticker"></div></div></section>
     <section class="pane admin" id="admin"></section>
   </div>
   <section class="pane se" id="se"></section>
@@ -471,7 +582,7 @@ const D={
 'pe.err':['LINE display name is required.','กรุณากรอกชื่อที่แสดงใน LINE','LINE表示名は必須です。'],'pe.last':['Keep at least one LINE user.','ต้องมีผู้ใช้ LINE อย่างน้อย 1 คน','LINEユーザーは最低1人必要です。'],
 'clean.note':['Clean data: no residents, requests or appliances yet. Add or edit LINE users above and build your own scenario. "Reset demo" brings back the sample scenarios.','ข้อมูลว่าง: ยังไม่มีผู้พัก งานแจ้งเรื่อง หรือเครื่องใช้ไฟฟ้า เพิ่มหรือแก้ไขผู้ใช้ LINE ด้านบนแล้วสร้างสถานการณ์เองได้ กด "รีเซ็ตเดโม" เพื่อกลับไปใช้สถานการณ์ตัวอย่าง','空データ：入居者・案件・家電はまだありません。上でLINEユーザーを追加・編集して独自のシナリオを作れます。「デモをリセット」でサンプルシナリオに戻ります。'],
 'pane.line':['Resident · LINE OA + LIFF','ลูกบ้าน · LINE OA + LIFF','入居者 · LINE公式アカウント＋LIFF'],
-'pane.admin':['Management & 24h support desk · Admin web','นิติ & ศูนย์บริการ 24 ชม. · เว็บแอดมิน','管理会社・24hサポート窓口 · 管理Web'],
+'pane.admin':['Management 24h · Admin Web','เจ้าหน้าที่ 24 ชม. · Admin Web','管理 24h · Admin Web'],
 'pane.se':['Social Engagement · Inbox','Social Engagement · Inbox','ソーシャルエンゲージメント · 受信箱'],
 'pane.seNote':['Existing system: receives tickets and chats only','ระบบเดิม: รับ ticket และแชทเท่านั้น','既存システム：チケットとチャットの受信のみ'],
 'name.p1':['Mali Srisuk','มะลิ ศรีสุข','マリ・シースック'],'name.p2':['Somchai Kittiwong','สมชาย กิตติวงศ์','ソムチャイ・キッティウォン'],
@@ -504,13 +615,13 @@ const D={
 'ir.asked':['Asked','ถามไปแล้ว','依頼内容'],'ir.wait':['Waiting for reply…','รอลูกบ้านตอบ…','回答待ち…'],
 'ir.ans':['Resident replied','ลูกบ้านตอบกลับ','入居者の回答'],
 'm.ir':['[{id}] We need a little more information\n{q}\nPlease reply using the form.','[{id}] ขอข้อมูลเพิ่มเติมจากลูกบ้าน\n{q}\nรบกวนตอบกลับผ่านฟอร์ม','【{id}】追加情報のお願い\n{q}\nフォームからご回答ください。'],
-'m.irThanks':['Thank you. We received your information for {id} and passed it to the technician.','ขอบคุณค่ะ ได้รับข้อมูลเพิ่มเติมของ {id} แล้ว ส่งต่อให้ช่างเรียบร้อย','{id} の追加情報を受け付け、技術者に共有しました。ありがとうございます。'],
+'m.irThanks':['Thank you. We received your information for {id}.','ขอบคุณค่ะ ได้รับข้อมูลของ {id} แล้ว','{id} の情報を受け付けました。ありがとうございます。'],
 'irf.h':['Information requested','ข้อมูลที่ขอเพิ่มเติม','追加情報のお願い'],'irf.a':['Your answer','คำตอบของคุณ','回答'],'irf.f':['Attach photos or files','แนบรูปหรือไฟล์','写真・ファイルを添付'],
-'irf.send':['Send to Management','ส่งให้นิติ','管理会社へ送信'],'irf.err':['Write an answer or attach a file.','กรอกคำตอบหรือแนบไฟล์อย่างน้อย 1 อย่าง','回答を入力するかファイルを添付してください。'],
+'irf.send':['Send to Management','ส่งให้เจ้าหน้าที่','管理会社へ送信'],'irf.err':['Write an answer or attach a file.','กรอกคำตอบหรือแนบไฟล์อย่างน้อย 1 อย่าง','回答を入力するかファイルを添付してください。'],
 'irf.done':['Already answered. Thank you!','ตอบกลับแล้ว ขอบคุณค่ะ','回答済みです。ありがとうございました。'],
 'tl.ir':['Asked resident: {x}','ขอข้อมูลจากลูกบ้าน: {x}','入居者に依頼：{x}'],'tl.irAns':['Resident replied: {x}','ลูกบ้านตอบกลับ: {x}','入居者が回答：{x}'],
 'tl.att':['Attached chat {no}','แนบแชท {no}','チャット {no} を添付'],'files':['{n} file(s)','{n} ไฟล์','{n}件のファイル'],
-'at.h':['Chats attached from Social Engagement','แชทที่แนบจาก Social Engagement','添付されたチャット'],
+'at.h':['Related Ticket No. (Social Engagement)','Ticket No. (Social Engagement) ที่เกี่ยวข้อง','関連チケット番号（Social Engagement）'],
 'at.pick':['Attach a chat ticket','แนบ ticket แชท','チャットを添付'],'at.btn':['Attach','แนบ','添付'],'at.none':['No chat tickets from this resident.','ไม่มี ticket แชทของลูกบ้านคนนี้','この入居者のチャットはありません。'],
 'chs.attach':['Attach to request','แนบเข้าเรื่องที่มีอยู่','既存案件に添付'],'chs.attached':['Attached to {id}','แนบเข้า {id} แล้ว','{id} に添付済み'],
 'sch.pTech':['Your bookings for the coming days.','คิวงานของคุณในวันถัดไป','今後の予約状況です。'],
@@ -535,7 +646,7 @@ const D={
 'rs.active':['Active','ใช้งาน','有効'],'rs.pending':['Awaiting Approval','รออนุมัติ','承認待ち'],'rs.sso':['LINE Sign-in Sent','ส่งลิงก์ LINE แล้ว','LINEログイン送信済み'],'rs.removed':['Removed','ถูกลบแล้ว','削除済み'],'rs.rejected':['Rejected','ปฏิเสธ','却下'],
 'tech.0':['Unassigned','ยังไม่มอบหมาย','未割り当て'],'tech.1':['Plumbing Team (24h)','ทีมประปาพาร์ทเนอร์ (24 ชม.)','水道チーム（24h）'],'tech.2':['Locksmith Team (24h)','ทีมกุญแจพาร์ทเนอร์ (24 ชม.)','鍵チーム（24h）'],
 'tech.3':['Glazing Team (24h)','ทีมกระจกพาร์ทเนอร์ (24 ชม.)','ガラスチーム（24h）'],'tech.4':['Electrical Team','ทีมไฟฟ้าพาร์ทเนอร์','電気チーム'],'tech.5':['Gas & Water Heater Team','ทีมแก๊ส / เครื่องทำน้ำอุ่น','ガス・給湯器チーム'],
-'tech.6':['AC Service Team','ทีมแอร์พาร์ทเนอร์','エアコンチーム'],'tech.7':['Inspection Team','ทีมตรวจเช็ก','点検チーム'],'tech.8':['Management Office Staff','เจ้าหน้าที่นิติ','管理事務所スタッフ'],
+'tech.6':['AC Service Team','ทีมแอร์พาร์ทเนอร์','エアコンチーム'],'tech.7':['Inspection Team','ทีมตรวจเช็ก','点検チーム'],'tech.8':['Management Office Staff','เจ้าหน้าที่สำนักงาน','管理事務所スタッフ'],
 /* request types (rush-service style categories) */
 'rt.water':['Water / Toilet / Leak','น้ำ / ห้องน้ำ / รั่วซึม','水廻り・トイレ・漏水'],
 'rt.key':['Door Key / Locked Out','กุญแจ / ล็อกนอกห้อง','玄関の鍵・締め出し'],
@@ -561,7 +672,7 @@ const D={
 'nc.other':['Other / not registered','อื่นๆ / ยังไม่ลงทะเบียน','その他・未登録'],'nc.name':['Caller name','ชื่อผู้โทร','発信者名'],'nc.phone':['Phone','เบอร์โทร','電話番号'],
 'nc.cc':['First-aid guidance given (optional)','คำแนะนำเบื้องต้นที่แจ้งไปแล้ว (ถ้ามี)','案内した応急処置（任意）'],
 'nc.save':['Create Request','สร้างงาน','登録する'],'nc.err':['Fill in the caller, subject and details.','กรอกผู้โทร หัวข้อ และรายละเอียด','発信者・件名・詳細を入力してください。'],
-'h24':['24h dispatch','ส่งช่าง 24 ชม.','24h出動'],'hday':['Dispatch 09:00–17:00','ส่งช่าง 09:00–17:00 น.','出動 09:00〜17:00'],'hoff':['Office handles','นิติดูแล','管理会社対応'],
+'h24':['24h dispatch','ส่งช่าง 24 ชม.','24h出動'],'hday':['Dispatch 09:00–17:00','ส่งช่าง 09:00–17:00 น.','出動 09:00〜17:00'],'hoff':['Office handles','เจ้าหน้าที่ดูแล','管理会社対応'],
 'disp.24':['Accepted 24/7 · dispatch 24/7','รับเรื่อง 24 ชม. · ส่งช่าง 24 ชม.','24時間受付・24時間出動'],
 'disp.day':['Accepted 24/7 · dispatch 09:00–17:00','รับเรื่อง 24 ชม. · ส่งช่าง 09:00–17:00 น.','24時間受付・出動 09:00〜17:00'],
 'free.fa':['Emergency first-aid visit is free (about 30 min, basic parts, no special tools).','ช่างเข้าแก้ไขเบื้องต้นฟรี (ประมาณ 30 นาที อะไหล่พื้นฐาน ไม่ใช้เครื่องมือพิเศษ)','応急処置の出動は無料（30分程度・簡易部品・特殊工具不要の作業まで）'],
@@ -586,7 +697,7 @@ const D={
 'q.1':['A partner technician is on the way. Estimated arrival within 60 minutes.','ช่างพาร์ทเนอร์กำลังเดินทาง คาดว่าถึงภายใน 60 นาที','提携業者が向かっています。60分以内に到着予定です。'],
 'q.2':['This is covered by the extended warranty, so there is no charge.','รายการนี้อยู่ในประกันขยายเวลา ไม่มีค่าใช้จ่าย','延長保証の対象のため、費用はかかりません。'],
 'q.3':['Your inspection is confirmed. The technician will call 30 minutes before arriving.','ยืนยันวันนัดตรวจเช็กแล้ว ช่างจะโทรแจ้งก่อนถึง 30 นาที','点検日が確定しました。到着30分前に技術者からお電話します。'],
-'q.4':['We have contacted the unit concerned and will keep monitoring.','นิติได้แจ้งห้องที่เกี่ยวข้องแล้ว และจะติดตามผลต่อ','該当の住戸に連絡しました。引き続き様子を見ます。'],
+'q.4':['We have contacted the unit concerned and will keep monitoring.','เจ้าหน้าที่ได้แจ้งห้องที่เกี่ยวข้องแล้ว และจะติดตามผลต่อ','該当の住戸に連絡しました。引き続き様子を見ます。'],
 'q.5':['This has been resolved. Thank you for letting us know.','ดำเนินการเรียบร้อยแล้ว ขอบคุณที่แจ้งครับ','対応が完了しました。ご連絡ありがとうございました。'],
 'age':['{n} yrs','{n} ปี','{n}年'],'age1':['1 yr','1 ปี','1年'],'age0':['< 1 yr','< 1 ปี','1年未満'],
 /* seed content */
@@ -602,26 +713,26 @@ const D={
 'tk.c03.when':['Every night after 00:00','ทุกคืนหลังเที่ยงคืน','毎晩0時以降'],
 /* LINE text messages (plain text) */
 'tmsg':['[{lb}] {id}\n{r}\n{x}\n{title}: {d}','[{lb}] {id}\n{r}\n{x}\n{title}: {d}','【{lb}】{id}\n{r}\n{x}\n{title}：{d}'],
-'tmsg.upd':['(Appliance info update sent for approval)','(ส่งอัปเดตข้อมูลเครื่องใช้ไฟฟ้าให้นิติอนุมัติ)','（家電情報の更新を承認申請）'],
+'tmsg.upd':['(Appliance info update sent for approval)','(ส่งอัปเดตข้อมูลเครื่องใช้ไฟฟ้าให้เจ้าหน้าที่อนุมัติ)','（家電情報の更新を承認申請）'],
 'tmsg.anon':['(Please keep my name private)','(ขอไม่เปิดเผยชื่อ)','（匿名希望）'],
 'apx':N('{t} {m}'),'two':N('{a} · {b}'),'nl':N('{a}\n{b}'),
 'lnk':['View details','ดูรายละเอียด','詳細を見る'],
 'm.ack':['We have received {id}. Zanroo Living will reply in this chat.','ได้รับเรื่อง {id} แล้ว Zanroo Living จะตอบกลับในแชทนี้','{id} を受け付けました。Zanroo Living からこのチャットでご連絡します。'],
 'm.status':['[{id}] Status: {s}\n{title}','[{id}] สถานะ: {s}\n{title}','【{id}】ステータス：{s}\n{title}'],
 'm.prog':['[{id}] Update\n{x}','[{id}] อัปเดต\n{x}','【{id}】進捗のお知らせ\n{x}'],
-'m.done':['[{id}] Completed\n{title}\nThank you. We are here 24/7 if you need us again.','[{id}] เสร็จสิ้น\n{title}\nขอบคุณค่ะ ติดต่อเราได้ตลอด 24 ชม.','【{id}】完了\n{title}\nご協力ありがとうございました。24時間いつでもご連絡ください。'],
-'m.welcome':['Welcome to Zanroo Living, 24h resident support. Scan the QR code to register.','ยินดีต้อนรับสู่ Zanroo Living บริการผู้พักอาศัย 24 ชม. ลงทะเบียนโดยสแกน QR ได้เลยค่ะ','Zanroo Living 24時間入居者サポートへようこそ。QRコードを読み取って登録してください。'],
-'m.regSent':['Your registration for {r} has been sent. You will get a LINE verification link in this chat once it is approved.','คำขอลงทะเบียน {r} ถูกส่งแล้ว เมื่ออนุมัติจะได้รับลิงก์ยืนยันด้วย LINE ในแชทนี้','{r} の登録申請を送信しました。承認されると、このチャットにLINE認証リンクが届きます。'],
-'card.sso.t':['Complete your registration','ลงทะเบียนให้เสร็จสมบูรณ์','登録を完了してください'],
-'card.sso.s':['Approved for {r}. Verify with your LINE account to finish (valid 24 h).','อนุมัติแล้วสำหรับ {r} ยืนยันตัวตนด้วยบัญชี LINE เพื่อเสร็จสิ้น (ใช้ได้ 24 ชม.)','{r} の登録が承認されました。LINEアカウントで認証して完了してください（24時間有効）。'],
-'card.sso.b':['Verify with LINE','ยืนยันด้วย LINE','LINEで認証'],
-'m.registered':['Registration complete. Welcome to {r}! Our support desk is available 24/7.','ลงทะเบียนเสร็จสมบูรณ์ ยินดีต้อนรับสู่ {r} ศูนย์บริการพร้อมดูแลตลอด 24 ชม.','登録が完了しました。{r} へようこそ！サポート窓口は24時間対応です。'],
+'m.done':['[{id}] Completed\n{title}\nThank you!','[{id}] เสร็จสิ้น\n{title}\nขอบคุณค่ะ','[{id}] 完了\n{title}\nありがとうございました。'],
+'m.welcome':['Welcome to Zanroo Living, 24h resident support. Tap the link below to register.','ยินดีต้อนรับสู่ Zanroo Living บริการผู้พักอาศัย 24 ชม. ลงทะเบียนได้ที่ลิงก์ด้านล่างได้เลยค่ะ','Zanroo Living 24時間入居者サポートへようこそ。下のリンクから登録してください。'],
+'m.regSent':['Your registration has been sent. You will get a LINE verification link in this chat once it is approved.','คำขอลงทะเบียนถูกส่งแล้ว เมื่ออนุมัติจะได้รับลิงก์ยืนยันด้วย LINE ในแชทนี้','登録申請を送信しました。承認されると、このチャットにLINE認証リンクが届きます。'],
+'card.sso.t':['Approved your registration','อนุมัติการลงทะเบียนแล้ว','登録が承認されました'],
+'card.sso.s':['Verify with your LINE account to finish (valid 24 hrs).','ยืนยันด้วยบัญชี LINE เพื่อเสร็จสิ้น (ใช้ได้ 24 ชม.)','LINEアカウントで認証して完了してください（24時間有効）。'],
+'card.sso.b':['Verify','ยืนยัน','認証'],
+'m.registered':['Registration complete. Welcome to Zanroo Living! Our support desk is available 24/7.','ลงทะเบียนเสร็จสมบูรณ์ ยินดีต้อนรับสู่ Zanroo Living! ศูนย์บริการพร้อมดูแลตลอด 24 ชม.','登録が完了しました。Zanroo Living へようこそ！サポート窓口は24時間対応です。'],
 'm.regRejected':['Your registration for {r} was not approved: {x}','คำขอลงทะเบียน {r} ไม่ได้รับอนุมัติ: {x}','{r} の登録は承認されませんでした：{x}'],
-'m.removed':['You have been logged out of {r}. Thank you for letting us take care of your home. We truly appreciated the chance to serve you and wish you all the best in your new place.','บัญชีของคุณได้ออกจากระบบ (log out) ของ {r} เรียบร้อยแล้ว ขอบคุณที่ให้เราได้ดูแลที่พักของคุณ เรายินดีมากที่ได้ให้บริการ และขอให้มีความสุขกับที่พักใหม่นะคะ','{r} からログアウトしました。これまでお住まいのサポートをさせていただき、誠にありがとうございました。新しい住まいでのご多幸をお祈りしております。'],
-'m.apRecv':['We received your request to {act} {x}. It is waiting for approval.','ได้รับคำขอ{act} {x} แล้ว รอนิติอนุมัติค่ะ','{x} の{act}申請を受け付けました。承認をお待ちください。'],
+'m.removed':['You have been logged out of {r}. Thank you for letting us care for your home. We wish you all the best!','ออกจากระบบ (log out) ของ {r} เรียบร้อยแล้ว ขอบคุณที่ให้เราได้ดูแล และขอให้มีความสุขกับที่พักใหม่นะคะ','{r} からログアウトしました。これまでありがとうございました。新居でのご多幸をお祈りします。'],
+'m.apRecv':['We received your request to {act} {x}. It is waiting for approval.','ได้รับคำขอ{act} {x} แล้ว รอเจ้าหน้าที่อนุมัติค่ะ','{x} の{act}申請を受け付けました。承認をお待ちください。'],
 'act.add':['register','ลงทะเบียน','登録'],'act.edit':['update','แก้ไข','変更'],
-'m.apOkAdd':['Approved: {x} is now registered to your unit.','นิติอนุมัติการลงทะเบียน {x} แล้วค่ะ','承認されました：{x} が登録されました。'],
-'m.apOkEdit':['Approved: your {t} is now recorded as {m} ({y}).','นิติอนุมัติการแก้ไข {t} เป็น {m} ({y}) แล้วค่ะ','承認されました：{t} は {m}（{y}年）として登録されました。'],
+'m.apOkAdd':['Approved: {x} is now registered to your unit.','เจ้าหน้าที่อนุมัติการลงทะเบียน {x} แล้วค่ะ','承認されました：{x} が登録されました。'],
+'m.apOkEdit':['Approved: your {t} is now recorded as {m} ({y}).','เจ้าหน้าที่อนุมัติการแก้ไข {t} เป็น {m} ({y}) แล้วค่ะ','承認されました：{t} は {m}（{y}年）として登録されました。'],
 'm.apRej':['Your request to {act} {t} was not approved: {x}','คำขอ{act} {t} ไม่ได้รับอนุมัติ: {x}','{t} の{act}申請は承認されませんでした：{x}'],
 'reason.default':['Information could not be verified','ไม่สามารถยืนยันข้อมูลได้','情報を確認できませんでした'],
 'reason.removed':['Auto-cancelled: resident removed','ยกเลิกอัตโนมัติ: ผู้พักถูกลบออก','自動取消：入居者削除'],
@@ -635,13 +746,13 @@ const D={
 'st.h':['QR sticker inside {n}’s unit','สติกเกอร์ QR ในห้องของ{n}','{n}の住戸内のQRステッカー'],
 'st.p':['Demo prop. In real use the resident scans it with the phone camera; the app never lists units.','อุปกรณ์เดโม ใช้งานจริงลูกบ้านสแกนด้วยกล้องมือถือ แอปจะไม่แสดงรายการห้องให้เลือก','デモ用。実際は入居者がスマホのカメラで読み取り、アプリに住戸一覧は表示されません。'],
 'st.btn':['Scan with phone camera','สแกนด้วยกล้องมือถือ','カメラで読み取る'],
-'qrFrom':['Opened from QR','เปิดจาก QR','QRから読み込み'],
+'qrFrom':['Your unit','ห้อง/บ้านของคุณ','ご住戸'],
 'reg.h':['Register as a resident','ลงทะเบียนผู้พักอาศัย','入居者登録'],'reg.signed':['LINE account: {l}','บัญชี LINE: {l}','LINEアカウント：{l}'],
 'reg.name':['Full name','ชื่อ-นามสกุล','氏名'],'reg.phone':['Mobile number','เบอร์มือถือ','携帯電話番号'],'reg.role':['I am a','สถานะ','区分'],'reg.lang':['Preferred language for support','ภาษาที่ต้องการให้ติดต่อ','サポートの希望言語'],
 'reg.submit':['Request registration','ส่งคำขอลงทะเบียน','登録を申請'],
-'reg.note':['Management checks your details. Once approved, you verify with your LINE account (LINE Login).','นิติจะตรวจสอบข้อมูล เมื่ออนุมัติแล้วคุณจะยืนยันตัวตนด้วยบัญชี LINE (LINE Login)','管理会社が内容を確認します。承認後、LINEアカウント（LINE Login）で認証します。'],
+'reg.note':['Management checks your details. Once approved, you verify with your LINE account (LINE Login).','เจ้าหน้าที่จะตรวจสอบข้อมูล เมื่ออนุมัติแล้วคุณจะยืนยันตัวตนด้วยบัญชี LINE (LINE Login)','管理会社が内容を確認します。承認後、LINEアカウント（LINE Login）で認証します。'],
 'reg.prev':['Your previous access to this unit was removed. A new request must be approved again.','สิทธิ์เดิมของคุณในห้องนี้ถูกลบแล้ว คำขอใหม่ต้องได้รับอนุมัติอีกครั้ง','この住戸への以前の権限は削除されています。新しい申請には再度承認が必要です。'],
-'pend.h':['Waiting for approval','รอนิติอนุมัติ','承認待ち'],
+'pend.h':['Waiting for approval','รอเจ้าหน้าที่อนุมัติ','承認待ち'],
 'pend.p':['Your request for {r} was sent {t}. A LINE verification link will arrive in the chat once it is approved.','คำขอสำหรับ {r} ส่งเมื่อ {t} เมื่ออนุมัติแล้วจะได้รับลิงก์ยืนยันด้วย LINE ในแชท','{r} の申請を{t}に送信しました。承認後、チャットにLINE認証のリンクが届きます。'],
 'pend.note':['Approve it in the admin web → Approvals.','ไปอนุมัติได้ที่เว็บแอดมิน → คิวอนุมัติ','管理Web → 承認 で承認してください。'],
 'sso.req':['Zanroo Living is requesting access to:','Zanroo Living ขอสิทธิ์เข้าถึง:','Zanroo Living が次の情報へのアクセスを求めています：'],
@@ -660,7 +771,7 @@ const D={
 'tile.insp':['{x}','{x}','{x}'],
 'tile.tk':['{n} open','{n} เรื่องที่ยังเปิดอยู่','対応中 {n}件'],'tile.info':['Details & support language','ข้อมูลและภาษาที่ติดต่อ','登録情報・対応言語'],
 'latest':['Latest request','เรื่องล่าสุด','最新の依頼'],
-'app.p':['Records belong to the unit. Built-in equipment is covered by the extended warranty for up to 10 years from handover. Your changes take effect after approval.','ข้อมูลผูกกับห้อง อุปกรณ์ติดตั้งในห้องได้รับประกันขยายเวลาสูงสุด 10 ปีนับจากวันส่งมอบ การแก้ไขมีผลหลังนิติอนุมัติ','記録は住戸に紐づきます。備え付け設備は引渡しから最長10年の延長保証対象です。変更は承認後に反映されます。'],
+'app.p':['Records belong to the unit. Built-in equipment is covered by the extended warranty for up to 10 years from handover. Your changes take effect after approval.','ข้อมูลผูกกับห้อง อุปกรณ์ติดตั้งในห้องได้รับประกันขยายเวลาสูงสุด 10 ปีนับจากวันส่งมอบ การแก้ไขมีผลหลังเจ้าหน้าที่อนุมัติ','記録は住戸に紐づきます。備え付け設備は引渡しから最長10年の延長保証対象です。変更は承認後に反映されます。'],
 'app.add':['+ Register an appliance','+ ลงทะเบียนเครื่องใช้ไฟฟ้า','＋ 家電を登録'],
 'chip.pending':['Pending','รออนุมัติ','承認待ち'],'chip.editPend':['Update pending','รออนุมัติการแก้ไข','変更承認待ち'],
 'app.sub':['{y} · {a} · {l}','ปี {y} · อายุ {a} · {l}','{y}年製 · 使用{a} · {l}'],
@@ -671,12 +782,12 @@ const D={
 'btn.approve':['Approve','อนุมัติ','承認'],'btn.reject':['Reject','ปฏิเสธ','却下'],
 'form.add':['Register an appliance','ลงทะเบียนเครื่องใช้ไฟฟ้า','家電を登録'],'form.edit':['Edit appliance','แก้ไขเครื่องใช้ไฟฟ้า','家電を編集'],
 'f.type':['Type','ประเภท','種類'],'f.brand':['Maker','ยี่ห้อ','メーカー'],'f.model':['Model','รุ่น','型番'],'f.year':['Year','ปี (ค.ศ.)','設置年'],'f.loc':['Location','ตำแหน่ง','設置場所'],
-'f.submit':['Send for approval','ส่งให้นิติอนุมัติ','承認を申請'],
+'f.submit':['Send for approval','ส่งให้เจ้าหน้าที่อนุมัติ','承認を申請'],
 'r.h':['Report trouble','แจ้งซ่อม / แจ้งปัญหา','トラブル報告'],'r.kind':['What is the problem?','ปัญหาเรื่องอะไร','どのようなトラブルですか'],
 'r.ap':['Which appliance or equipment?','เครื่องใช้ไฟฟ้า / อุปกรณ์ที่มีปัญหา','対象の家電・設備'],
 'r.cur':['Registered info','ข้อมูลที่ลงทะเบียนไว้','登録済みの情報'],
 'r.upd':['This info is wrong or outdated, update it','ข้อมูลไม่ถูกต้อง/ไม่เป็นปัจจุบัน อัปเดตข้อมูล','情報が違う・古いので更新する'],
-'r.updNote':['The update goes to management for approval together with this report.','การอัปเดตจะส่งให้นิติอนุมัติพร้อมเรื่องนี้','更新内容はこの報告と一緒に承認に回ります。'],
+'r.updNote':['The update goes to management for approval together with this report.','การอัปเดตจะส่งให้เจ้าหน้าที่อนุมัติพร้อมเรื่องนี้','更新内容はこの報告と一緒に承認に回ります。'],
 'r.topic':['About','เรื่อง','内容'],
 'r.where':['Which unit or place (if known)','ห้อง/บ้าน หรือบริเวณที่เกี่ยวข้อง (ถ้าทราบ)','対象の住戸・場所（わかれば）'],'r.whereP':['e.g. the unit above, lobby','เช่น ห้องชั้นบน, ล็อบบี้','例：上の階の部屋、ロビー'],
 'r.when':['When does it happen?','เกิดขึ้นช่วงไหน','いつ発生しますか'],'r.whenP':['e.g. every night after 23:00','เช่น ทุกคืนหลัง 23:00','例：毎晩23時以降'],
@@ -733,10 +844,26 @@ const D={
 'war.win':['{n} days','{n} วัน','{n}日'],'war.end':['Warranty ends','ประกันสิ้นสุด','保証終了日'],'war.left':['{n} days left','เหลือ {n} วัน','残り{n}日'],
 'war.notify':['Notify','แจ้งเตือน','通知'],'war.notifyAll':['Notify all ({n})','แจ้งเตือนทั้งหมด ({n})','すべて通知（{n}）'],'war.sent':['Notified {t}','แจ้งแล้ว {t}','通知済み {t}'],
 'war.noRes':['No resident on LINE','ไม่มีลูกบ้านบน LINE','LINE登録の入居者なし'],'war.empty':['No warranties end in this period.','ไม่มีประกันที่จะหมดในช่วงนี้','この期間に終了する保証はありません。'],
-'m.warSoon':['Reminder: the extended warranty for {x} at {r} ends on {d}. If anything is not working properly, report it before then for a free repair.','แจ้งเตือน: ประกันขยายเวลาของ {x} ที่ {r} จะสิ้นสุดวันที่ {d} หากพบปัญหาการใช้งาน แจ้งซ่อมก่อนวันดังกล่าวเพื่อรับบริการฟรีค่ะ','お知らせ：{r} の {x} の延長保証は {d} に終了します。不具合があれば、無償修理の期間内にご連絡ください。'],
+'m.warSoon':['The warranty for {x} ends on {d}. Report any issue before then for a free repair.','ประกัน {x} จะหมดวันที่ {d} หากมีปัญหา แจ้งซ่อมก่อนวันดังกล่าวเพื่อรับบริการฟรีค่ะ','{x} の保証は {d} に終了します。不具合は期限内にご連絡ください（無償修理）。'],
 'm.irAns':['More information for {id}: {x}','ข้อมูลเพิ่มเติมสำหรับ {id}: {x}','{id} の追加情報：{x}'],
 'ri.qr':['My QR CODE','QR CODE ประจำตัว','マイQRコード'],'ri.qrP':['Show this to staff or the technician team to confirm who you are.','แสดงให้เจ้าหน้าที่หรือทีมช่างสแกนเพื่อยืนยันตัวตน','スタッフや技術チームに提示して本人確認に使います。'],
 'ap.otherP':['Specify type','ระบุประเภท','種類を入力'],'e.other':['Please specify the appliance type.','กรุณาระบุประเภทเครื่องใช้ไฟฟ้า','種類を入力してください。'],
+'reg.pickUnit':['Select your unit','เลือกห้อง/บ้าน','住戸を選択'],'e.unit':['Please select your unit.','กรุณาเลือกห้อง/บ้าน','住戸を選択してください。'],
+'st.noneH':['No QR CODE yet','ยังไม่มี QR CODE','QRコードはまだありません'],'st.noneP':['Your personal QR CODE appears here once you register and management approves.','QR CODE ประจำตัวจะแสดงหลังลงทะเบียนและเจ้าหน้าที่อนุมัติแล้ว','登録して管理会社に承認されると、個人のQRコードがここに表示されます。'],
+'scan.h':['Verified resident','ยืนยันตัวตนแล้ว','本人確認済み'],'scan.p':['Opened from QR CODE','เปิดจาก QR CODE','QRコードから表示'],'scan.open':['Open requests','เรื่องที่กำลังดำเนินการ','対応中の案件'],
+'ct.otherP':['Specify the topic','ระบุหัวข้อ','内容を入力'],'e.topic':['Please specify the topic.','กรุณาระบุหัวข้อร้องเรียน','内容を入力してください。'],
+'view.lbl':['Screen','มุมมองหน้าจอ','表示'],'view.pc':['PC','PC','PC'],'view.m':['Mobile','Mobile','モバイル'],
+'bell.h':['Notifications','การแจ้งเตือน','通知'],'bell.asg':['Newly assigned','งานที่มอบหมายเข้ามา','新しく割り当てられた案件'],'bell.soon':['Coming up (next 24 hrs)','งานที่ใกล้ถึง (24 ชม.)','まもなくの予定（24時間以内）'],'bell.none':['Nothing new','ไม่มีการแจ้งเตือนใหม่','新しい通知はありません'],'bell.new':['New','ใหม่','新着'],
+'nav.dash':['Dashboard','แดชบอร์ด','ダッシュボード'],'nav.rep':['Reports','รายงาน','レポート'],
+'sch.hourV':['Hourly','รายชั่วโมง','時間別'],'sch.monthV':['This month','เดือนนี้','今月'],'sch.repN':['{n} jobs','งาน {n}','{n}件'],'sch.insN':['Inspect {n}','ตรวจ {n}','点検 {n}'],'sch.today':['Today','วันนี้','今日'],'sch.pick':['Tap a highlighted day to see hourly slots.','กดวันที่มีข้อมูลเพื่อดูคิวรายชั่วโมง','色の付いた日をタップすると時間別の枠を表示します。'],
+'dash.total':['Requests','เรื่องทั้งหมด','案件数'],'dash.open':['Open','ยังไม่เสร็จ','未完了'],'dash.done':['Completed','เสร็จสิ้น','完了'],'dash.resp':['Avg. first reply','ตอบกลับครั้งแรกเฉลี่ย','初回応答（平均）'],'dash.solve':['Avg. time to complete','ปิดงานเฉลี่ย','完了までの平均'],'dash.line':['Via LINE','ผ่าน LINE','LINE経由'],
+'dash.min':['{n} min','{n} นาที','{n}分'],'dash.hr':['{n} hrs','{n} ชม.','{n}時間'],'dash.byType':['By type','แยกตามประเภท','種類別'],'dash.byProp':['By property','แยกตามโครงการ','物件別'],'dash.byCh':['By channel','แยกตามช่องทาง','チャネル別'],'dash.trend':['Requests per day','จำนวนเรื่องรายวัน','日別の案件数'],
+'dash.now':['Right now','ตอนนี้','現在'],'dash.pendAppr':['Waiting approval','รออนุมัติ','承認待ち'],'dash.chatOpen':['Open chats','แชทยังไม่เสร็จ','未完了チャット'],'dash.waitRes':['Waiting for resident','รอลูกบ้านตอบ','入居者の回答待ち'],'dash.note':['Includes sample history for the demo.','รวมข้อมูลย้อนหลังตัวอย่างสำหรับเดโม','デモ用のサンプル履歴を含みます。'],
+'ch.line':['LINE','LINE','LINE'],'ch.call':['Phone','โทรศัพท์','電話'],'ch.chat':['Chat','แชท','チャット'],
+'rep.h':['Reports','รายงาน','レポート'],'rep.p':['Pick a date range and filters, check the preview, then export.','เลือกช่วงวันที่และตัวกรอง ดูตัวอย่าง แล้วดึงข้อมูลออก','期間と条件を選び、プレビューを確認して出力します。'],'rep.from':['From','ตั้งแต่','開始'],'rep.to':['To','ถึง','終了'],'rep.all':['All','ทั้งหมด','すべて'],
+'rep.rows':['{n} rows','{n} แถว','{n}行'],'rep.preview':['Preview (first 10 rows)','ตัวอย่างข้อมูล (10 แถวแรก)','プレビュー（先頭10行）'],'rep.csv':['Export CSV','ดึงข้อมูล CSV','CSV出力'],'rep.xlsx':['Export Excel','ดึงข้อมูล Excel','Excel出力'],
+'rep.ready':['Demo: {f} ({n} rows) would download here.','เดโม: ไฟล์ {f} ({n} แถว) จะดาวน์โหลดตรงนี้ในระบบจริง','デモ：実際の運用では {f}（{n}行）がダウンロードされます。'],'rep.none':['No data in this range.','ไม่มีข้อมูลในช่วงนี้','この期間のデータはありません。'],
+'col.id':['Case No.','เลขเคส','案件番号'],'col.date':['Date','วันที่','日付'],'col.ch':['Channel','ช่องทาง','チャネル'],'col.resp':['First reply','ตอบครั้งแรก','初回応答'],
 'tl.status':['Status → {s}','สถานะ → {s}','ステータス → {s}'],'tl.prog':['Update sent: {x}','ส่งอัปเดต: {x}','送信：{x}'],'tl.tech':['Assigned: {x}','มอบหมาย: {x}','担当：{x}'],
 'apv.p':['Data changes only when you approve. Residents are notified on LINE.','ข้อมูลจริงจะเปลี่ยนเมื่อกดอนุมัติเท่านั้น และระบบแจ้งลูกบ้านทาง LINE','承認したときのみデータが変わり、入居者のLINEに通知されます。'],
 'apv.reg':['New resident registrations','คำขอลงทะเบียนผู้พักใหม่','新規入居者の登録申請'],'apv.ap':['Appliance changes from residents','การลงทะเบียน/แก้ไขเครื่องใช้ไฟฟ้าจากลูกบ้าน','入居者からの家電登録・変更'],
@@ -796,7 +923,7 @@ const D={
 'r.apOther':['Other, not in the list (specify)','อื่นๆ ไม่มีในรายการ (ระบุ)','その他・一覧にない（入力）'],
 'r.oReg':['Also register this appliance to my unit','ลงทะเบียนเครื่องนี้เข้าห้องของฉันด้วย','この家電を住戸に登録する'],
 'nc.oReg':['Add it to the unit’s appliance registry','เพิ่มเข้าทะเบียนเครื่องใช้ไฟฟ้าของห้องด้วย','住戸の家電台帳に追加する'],
-'tmsg.newAp':['(New appliance registration sent for approval)','(ส่งลงทะเบียนเครื่องใหม่ให้นิติอนุมัติ)','（新しい家電の登録を承認申請）'],
+'tmsg.newAp':['(New appliance registration sent for approval)','(ส่งลงทะเบียนเครื่องใหม่ให้เจ้าหน้าที่อนุมัติ)','（新しい家電の登録を承認申請）'],
 'rq.apNew':['Not in the registry yet. The resident sent a registration request (see Approvals).','ยังไม่มีในทะเบียน ลูกบ้านส่งคำขอลงทะเบียนมาแล้ว (ดูที่คิวอนุมัติ)','台帳に未登録。入居者から登録申請が届いています（承認を参照）。'],
 'ci.info':['Info','ข้อมูล','情報'],'ci.comments':['Comments','ความคิดเห็น','コメント'],'ci.tickets':['Related tickets','ทิกเกตที่เกี่ยวข้อง','関連チケット'],
 'ci.fav':['Favourite','Favourite','お気に入り'],'ci.flag':['Flag','Flag','フラグ'],'ci.send':['Send','Send','送信'],
@@ -810,7 +937,7 @@ const D={
 'ci.still':['Still in use','ยังใช้อยู่','使用中'],'ci.ask':['Ask to update','ขอให้อัปเดต','更新を依頼'],'ci.asked':['Update requested {d}','ขอให้อัปเดตแล้ว {d}','{d} 更新依頼済み'],
 'ci.noAps':['No unit linked yet.','ยังไม่ได้ผูกกับห้อง','住戸が未登録です。'],
 'ci.cmtP':['Add a comment for other agents…','เพิ่มความคิดเห็นถึงทีม…','チーム向けのコメント…'],'ci.cmtAdd':['Add comment','เพิ่มความคิดเห็น','コメント追加'],'ci.noCmt':['No comments yet.','ยังไม่มีความคิดเห็น','コメントはありません。'],
-'m.apAsk':['Please check your registered {x}. If it has changed, update it from "Register Appliances" in the menu.','รบกวนตรวจสอบข้อมูล {x} ที่ลงทะเบียนไว้ หากมีการเปลี่ยนแปลง อัปเดตได้ที่เมนู "ลงทะเบียน (เครื่องใช้ไฟฟ้า)"','登録済みの{x}をご確認ください。変更があればメニューの「家電の登録」から更新してください。'],
+'m.apAsk':['Please check your {x}. If it changed, update it in "Register Appliances".','รบกวนตรวจสอบ {x} หากมีการเปลี่ยนแปลง อัปเดตได้ที่เมนู "ลงทะเบียน (เครื่องใช้ไฟฟ้า)"','{x} をご確認ください。変更があれば「家電登録」から更新してください。'],
 'chat.p1q':['Hi, the intercom in my room doesn’t ring when visitors press the lobby button.','สวัสดีค่ะ อินเตอร์คอมในห้องไม่ดังเวลามีคนกดเรียกจากล็อบบี้ค่ะ','こんにちは。ロビーで呼び出しても部屋のインターホンが鳴りません。']
 };
 
@@ -852,6 +979,7 @@ const DISP={water:'24',key:'24',glass:'24',elec:'day',gas:'day',app:'day'};
 const RTK={water:'bad',key:'bad',glass:'bad',elec:'warn',gas:'warn',app:'acc',complaint:'info',common:'',other:'',inspection:'ok'};
 const DEFTECH={water:1,key:2,glass:3,elec:4,gas:5,app:6,complaint:8,common:8,other:8,inspection:7};
 const CTOP=['noise','smell','pet','parking','other'];
+const ctK=x=>x.topic==='other'&&x.topicText?x.topicText:K('ct.'+x.topic);
 const ROLES=['tenant','owner','co'];
 const SLANGS=['ja','en','zh','ko','es','pt'];
 const PREFIX={water:'RP',key:'RP',glass:'RP',elec:'RP',gas:'RP',app:'RP',complaint:'CP',common:'GN',other:'GN',inspection:'IN'};
@@ -868,7 +996,7 @@ function mkRooms(){
 }
 function seed(){
   return {
-    clock:TS(2026,11,11,9,10), seq:{rp:15,cp:3,gn:1,in:2,cr:3,ap:30,r:4},
+    clock:Math.max(Date.now(),TS(2026,11,11,9,10)), seq:{rp:15,cp:3,gn:1,in:2,cr:3,ap:30,r:4},
     personas:{
       p1:{id:'p1',name:K('name.p1'),cls:'p1',line:'Mali.S',uid:'U8a1c…c41',phone:'090-2147-7310',home:'O-1203',first:TS(2026,11,1)},
       p2:{id:'p2',name:K('name.p2'),cls:'p2',line:'Somchai_K',uid:'U3f90…0bd',phone:'080-4401-2900',home:'O-1203',first:TS(2023,7,1)},
@@ -907,7 +1035,7 @@ function seed(){
       {id:'CP-2611-003',type:'complaint',ch:'line',lang:'ja',room:'N-03',persona:'p4',topic:'pet',where:'N-04',when:K('tk.c03.when'),anon:true,title:K('tk.c03.title'),d:K('tk.c03.d'),status:'new',tech:0,created:TS(2026,11,11,7,48),last:TS(2026,11,11,7,48),unread:true,apUpd:null,
         log:[{k:'created',at:TS(2026,11,11,7,48)}]}
     ],
-    chats:{p1:[],p2:[{from:'oa',by:'bot',text:K('m.removed',{r:K('unitFull',{p:K('prop.O'),u:K('u.room',{n:'1203'})})}),at:TS(2026,10,31,17,0)}],p3:[{from:'oa',by:'bot',text:K('m.welcome'),at:TS(2026,11,10,16,0)}],p4:[]},
+    chats:{p1:[],p2:[{from:'oa',by:'bot',text:K('m.removed',{r:K('unitFull',{p:K('prop.O'),u:K('u.room',{n:'1203'})})}),at:TS(2026,10,31,17,0)}],p3:[{from:'oa',by:'bot',text:K('m.welcome'),link:{page:'register',arg:'register'},at:TS(2026,11,10,16,0)}],p4:[]},
     lineUnread:{p1:0,p2:0,p3:0},
     seUnread:{p1:0,p2:0,p3:0,p4:1},
     /* technician booking load: group|day-hour → booked count (capacity CAP per hour). Many units reported AC trouble today. */
@@ -977,7 +1105,7 @@ function resetAll(){
   [9,10,11,13].forEach(h=>S.book['ins|'+TS(2026,11,24)+'-'+h]=1);[10,14].forEach(h=>S.book['ins|'+TS(2026,11,21)+'-'+h]=1);
   S.mode='demo';S.pSeq=5;
   ph={persona:'p1',liff:false,page:'',room:null,ticket:null,edit:null,preAp:null,rtype:'app',slot:'asap',slotDay:0,sso:null,menu:true,err:null,pedit:null,pdel:false};
-  adm={tab:'req',ticket:'RP-2611-014',prop:null,room:null,delAp:null,rmRes:null,rejecting:null,conflict:null,err:null,nc:null};
+  adm={view:(adm||{}).view,tab:'req',ticket:'RP-2611-014',prop:null,room:null,delAp:null,rmRes:null,rejecting:null,conflict:null,err:null,nc:null};
   se={conv:'p4',edit:false};
 }
 /* "Reset all": keep the LINE users the tester set up, wipe every record */
@@ -990,15 +1118,15 @@ function resetClean(){
   S.seq={rp:0,cp:0,gn:0,in:0,cr:0,ap:0,r:0};
   S.residents=[];S.appliances=[];S.requests=[];S.tickets=[];S.book={};S.inspBook={};S.seTickets=[];S.seSeq=10000;S.apCheck={};
   S.chats={};S.lineUnread={};S.seUnread={};S.ci={};
-  Object.keys(keep).forEach(id=>{keep[id].first=t0;S.chats[id]=[{from:'oa',by:'bot',text:K('m.welcome'),at:t0}];S.lineUnread[id]=0;S.seUnread[id]=0;S.ci[id]=blankCi()});
+  Object.keys(keep).forEach(id=>{keep[id].first=t0;S.chats[id]=[{from:'oa',by:'bot',text:K('m.welcome'),link:{page:'register',arg:'register'},at:t0}];S.lineUnread[id]=0;S.seUnread[id]=0;S.ci[id]=blankCi()});
   const ids=Object.keys(keep);
   ph={persona:ids[0],liff:false,page:'',room:null,ticket:null,edit:null,preAp:null,rtype:'app',slot:'asap',slotDay:0,sso:null,menu:true,err:null,pedit:null,pdel:false};
-  adm={tab:'req',ticket:null,prop:null,room:null,delAp:null,rmRes:null,rejecting:null,conflict:null,err:null,nc:null};
+  adm={view:(adm||{}).view,tab:'req',ticket:null,prop:null,room:null,delAp:null,rmRes:null,rejecting:null,conflict:null,err:null,nc:null};
   se={conv:ids[0],edit:false};
 }
 const blankCi=()=>({name:'',phone:'',email:'',unit:'',comments:[],fav:false,flag:false});
 const lineUsers=()=>Object.values(S.personas).filter(p=>p.line);
-const now=()=>(S.clock+=60000*(1+Math.floor(Math.random()*3)));
+const now=()=>(S.clock=Math.max(Date.now(),S.clock+1000));
 const P=id=>S.personas[id], R=id=>S.rooms[id], AP=id=>S.appliances.find(a=>a.id===id), TK=id=>S.tickets.find(x=>x.id===id);
 const pname=id=>{const p=P(id);return p?(L(p.name)||p.line||'—'):'—'};
 const pfirst=id=>{const n=pname(id);return n.split(/[ ・]/)[0]||n};
@@ -1060,6 +1188,12 @@ const ICONS={
   activity:'<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
   wrench:'<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
   shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>',
+  monitor:'<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>',
+  chart:'<path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="6"/><rect x="12" y="7" width="3" height="10"/><rect x="17" y="13" width="3" height="4"/>',
+  report:'<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 17v-3M12 17v-6M16 17v-2"/>',
+  download:'<path d="M12 3v12M7 10l5 5 5-5M5 21h14"/>',
+  chevL:'<path d="M15 18l-6-6 6-6"/>',
+  chevR:'<path d="M9 18l6-6-6-6"/>',
   bell:'<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>',
   eye:'<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/>',
   history:'<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l4 2"/>',
@@ -1074,6 +1208,9 @@ const chIc=x=>{const k=x.ch==='call'?'phone':'chat',c=x.ch==='call'?'dark':'line
 const cbIc=x=>x.ch!=='call'||!x.cb?'':`<span class="tico ${x.cb==='done'?'ok':'warn'}" title="${esc(t(x.cb==='done'?'cb.done':'cb.need'))}">${ic('phone')}</span>`;
 /* definition-list row with an icon in place of the label (label kept as tooltip and for screen readers) */
 const kvi=(icon,label,val)=>`<dt title="${esc(label)}">${ic(icon)}<span class="sr">${esc(label)}</span></dt><dd>${val}</dd>`;
+/* collapsible box header (closed by default, like Quick replies) */
+const foldOpen=k=>!!(adm.fold||{})[k];
+const foldH=(k,icon,label,extra='')=>`<div class="foldrow"><button class="foldh" data-a="fold" data-k="${k}" aria-expanded="${foldOpen(k)}">${ic(icon)}<span>${esc(label)}</span><span class="chev">${foldOpen(k)?'▾':'▸'}</span></button>${extra}</div>`;
 const h4i=(icon,label,extra='')=>`<h4 class="h4i">${ic(icon)}<span>${esc(label)}</span>${extra}</h4>`;
 const stChip=s=>chip(t('st.'+s),STK[s]);
 const typeChip=x=>chip(t('rt.'+x.type),RTK[x.type]);
@@ -1081,7 +1218,7 @@ const chChip=x=>x.ch==='call'?chip(t('ch.call'),'dark'):x.ch==='chat'?chip(t('ch
 const warChip=a=>{const y=warOk(a);return y?chip(t('war.chip',{y}),'ok'):chip(t('war.none'))};
 function ticketExtra(x){
   if(x.type==='app'||(x.ap&&AP(x.ap))){const a=AP(x.ap);return a?apLabel(a):(x.apText||'')}
-  if(x.type==='complaint')return K('two',{a:K('ct.'+x.topic),b:x.where?(R(x.where)?unitK(x.where):x.where):(x.when||'')});
+  if(x.type==='complaint')return K('two',{a:ctK(x),b:x.where?(R(x.where)?unitK(x.where):x.where):(x.when||'')});
   if(x.type==='common')return x.where||'';
   if(x.type==='inspection')return '';
   if(DISP[x.type])return K('disp.'+DISP[x.type]);
@@ -1145,11 +1282,12 @@ const SCEN={
 function setPersona(id){ph.call=null;ph.persona=id;ph.liff=false;ph.page='';ph.err=null;ph.rtype='app';ph.slot='asap';S.lineUnread[id]=0}
 
 /* ============ LINE phone ============ */
-const BOUND=['home','appliances','appForm','repair','tickets','ticket','info','insp','irForm'];
+const BOUND=['scan','home','appliances','appForm','repair','tickets','ticket','info','insp','irForm'];
 function openPage(page,arg){
   const pid=ph.persona;ph.err=null;
   if(page==='sso'){ph.liff=true;ph.page='sso';ph.sso=arg;return}
   if(page==='call'){ph.liff=true;ph.page='call';return}
+  if(page==='register'&&!activeRoom(pid)){ph.liff=true;ph.page='register';ph.room=null;ph.regProp=null;ph.regUnit=null;return}
   if(BOUND.includes(page)){
     const u=activeRoom(pid);
     if(!u){
@@ -1159,7 +1297,7 @@ function openPage(page,arg){
       if(sso){ph.page='sso';ph.sso=sso.id;ph.room=sso.room}
       else if(pend){ph.page='pending';ph.room=pend.room}
       else if(rm){ph.page='removed';ph.room=rm.room}
-      else{ph.page='noaccess';ph.room=null}
+      else{ph.page='register';ph.room=null;ph.regProp=null;ph.regUnit=null}
       return;
     }
     ph.room=u;
@@ -1167,12 +1305,12 @@ function openPage(page,arg){
   ph.liff=true;ph.page=page;
   if(page==='ticket')ph.ticket=arg;
   if(page==='irForm'){ph.irArg=arg;ph.irFiles=[]}
-  if(page==='appForm')ph.edit=arg||null;
+  if(page==='appForm'){ph.edit=arg||null;ph.fType=null}
   if(page==='repair'){ph.preAp=arg||null;if(arg)ph.rtype='app'}
 }
 /* simulates the phone camera reading the QR sticker posted in the persona's own unit */
 function doScan(room){
-  const pid=ph.persona;ph.liff=true;ph.room=room;ph.err=null;
+  const pid=ph.persona;ph.liff=true;ph.room=room;ph.err=null;ph.regProp=null;ph.regUnit=null;
   const r=resOf(pid,room);
   if(!r||r.status==='rejected'){ph.page='register';return}
   ph.page={active:'home',pending:'pending',sso:'sso',removed:'removed'}[r.status];
@@ -1188,7 +1326,7 @@ function bubble(m){
 function renderPhone(){
   let liff='';
   if(ph.liff){
-    if(BOUND.includes(ph.page)&&!isActive(ph.persona,ph.room)){const r=resOf(ph.persona,ph.room);ph.page=r&&r.status==='removed'?'removed':'noaccess'}
+    if(BOUND.includes(ph.page)&&!isActive(ph.persona,ph.room)){const r=resOf(ph.persona,ph.room);ph.page=r&&r.status==='removed'?'removed':'register'}
     const tabs=BOUND.includes(ph.page);
     const tab=(p,k)=>`<button data-a="liffTab" data-p="${p}" aria-current="${ph.page===p||(p==='appliances'&&ph.page==='appForm')||(p==='tickets'&&ph.page==='ticket')}">${tx(k)}</button>`;
     liff=`<div class="liff" role="dialog" aria-label="LIFF"><div class="liff-bar"><div><b>Zanroo Living</b><small>liff.line.me${ph.room&&['register','home'].includes(ph.page)?' · ?unit='+esc(R(ph.room).qr):''}</small></div><button data-a="liffClose" aria-label="close">✕</button></div>
@@ -1197,7 +1335,7 @@ function renderPhone(){
   }
   const html=`<div class="ph-status"><span>${hm(S.clock)}</span><span>5G ▮▮▮</span></div>
     <div class="ph-head"><span class="oa-av">${tx('oa.av')}</span><div><b>${tx('oa.name')}</b><small>${tx('oa.sub')}</small></div><span class="oa-badge">OA</span></div>
-    <div class="ph-chat" id="ph-chat">${S.chats[ph.persona].map(bubble).join('')}</div>
+    <div class="ph-chat" id="ph-chat">${S.chats[ph.persona].filter(m=>!m.sys).map(bubble).join('')}</div>
     <div class="ph-input"><input id="ph-msg" placeholder="${tx('ph.input')}" autocomplete="off"><button data-a="userChat">${tx('send')}</button></div>
     <div class="rich ${ph.menu?'':'collapsed'}"><button class="rich-toggle" data-a="menu">${tx('menu')} ${ph.menu?'▾':'▴'}</button>
       <div class="rich-grid"><button data-a="rich" data-p="appliances">${tx('rich.app')}</button><button data-a="rich" data-p="tickets">${tx('rich.tickets')}</button><button data-a="rich" data-p="repair">${tx('rich.repair')}</button>
@@ -1205,13 +1343,17 @@ function renderPhone(){
     ${ph.call?`<div class="callpop" role="dialog" aria-label="${tx('call.h')}"><div class="cp-av">${tx('oa.av')}</div><b>${tx('call.h')}</b><span class="callnum" style="font-size:18px">${CALLNUM}</span>
       <span id="call-t">${tx('call.ing')}</span><button class="cp-end" data-a="callEnd" aria-label="${tx('call.end')}">✆</button><small>${tx('call.end')}</small><small class="muted">${tx('call.demo')}</small></div>`:''}`;
   preserve(document.getElementById('phone'),html);
+  renderSticker();
   const qm=document.getElementById('qr-me');if(qm)drawQR('qr-me','https://zanroo.link/m/'+qm.dataset.code,120);
   const c=document.getElementById('ph-chat');if(c)c.scrollTop=c.scrollHeight;
 }
 function renderSticker(){
-  const home=P(ph.persona).home,r=R(home);
-  document.getElementById('sticker').innerHTML=`<div class="qr-sm" id="qr-sticker"></div><div><span class="eyebrow">${tx('st.h',{n:pfirst(ph.persona)})}</span><b>${ex(roomK(home))}</b><p>${tx('st.p')}</p><button class="btn pri sm" data-a="scanSticker">${tx('st.btn')}</button></div>`;
-  drawQR('qr-sticker',qrUrl(r),98);
+  const el=document.getElementById('sticker');if(!el)return;
+  const room=activeRoom(ph.persona);
+  if(!room){el.className='sticker none';el.innerHTML=`<div class="qr-sm qr-ph">${ic('qr')}</div><div><b>${tx('st.noneH')}</b><p>${tx('st.noneP')}</p></div>`;return}
+  const code=memCode(ph.persona,room);el.className='sticker';
+  el.innerHTML=`<div class="qr-sm" id="qr-sticker"></div><div><span class="eyebrow">QR CODE</span><b>${ex(pname(ph.persona))}</b><p>${ex(roomK(room))}<br><span class="mono">${esc(code)}</span></p><button class="btn pri sm" data-a="scanSticker">${tx('st.btn')}</button></div>`;
+  drawQR('qr-sticker','https://zanroo.link/m/'+code,98);
 }
 /* resident's personal code (shown as a QR on the resident info page) */
 const memCode=(pid,room)=>{const u=String((P(pid)||{}).uid||pid).replace(/[^0-9a-z]/gi,'');return 'ZL-'+R(room).no+'-'+u.slice(1,6).toUpperCase()};
@@ -1233,18 +1375,24 @@ const PAGES={
     <button class="btn pri" data-a="liffTab" data-p="repair">${tx('call.line')}</button>`;
   },
   register(){
-    const p=P(ph.persona),prev=S.residents.some(r=>r.persona===ph.persona&&r.room===ph.room&&r.status==='removed');
-    return `${roomHero(ph.room)}<div><h3>${tx('reg.h')}</h3><p class="muted" style="font-size:12px">${tx('reg.signed',{l:p.line})}</p></div>
+    const p=P(ph.persona);
+    const prop=ph.regProp||(ph.room&&R(ph.room)&&R(ph.room).prop)||S.props[0];
+    const rooms=Object.values(S.rooms).filter(r=>r.prop===prop);
+    const unit=ph.regUnit&&R(ph.regUnit)&&R(ph.regUnit).prop===prop?ph.regUnit:(ph.regUnit===''?'':(ph.room&&R(ph.room)&&R(ph.room).prop===prop?ph.room:''));
+    const prev=unit&&S.residents.some(r=>r.persona===ph.persona&&r.room===unit&&r.status==='removed');
+    return `<div><h3>${tx('reg.h')}</h3><p class="muted" style="font-size:12px">${tx('reg.signed',{l:p.line})}</p></div>
     ${prev?`<div class="hint-box">${tx('reg.prev')}</div>`:''}
     <div class="form">
-      <label>${tx('reg.name')}<input id="g-name" value="${esc(pname(ph.persona))}" autocomplete="name"></label>
+      <label>${tx('nc.prop')}<select id="g-prop">${S.props.map(x=>`<option value="${x}" ${x===prop?'selected':''}>${tx('prop.'+x)}</option>`).join('')}</select></label>
+      <label>${tx('ri.unit')}<select id="g-unit"><option value="">${tx('reg.pickUnit')}</option>${rooms.map(r=>`<option value="${r.id}" ${r.id===unit?'selected':''}>${ex(unitK(r.id))}</option>`).join('')}</select></label>
+      <label>${tx('reg.name')}<input id="g-name" value="${esc(pname(ph.persona)==='—'?'':pname(ph.persona))}" autocomplete="name"></label>
       <label>${tx('reg.phone')}<input id="g-phone" inputmode="tel" value="${esc(p.phone)}"></label>
       <label>${tx('reg.role')}<select id="g-role">${ROLES.map(r=>`<option value="${r}">${tx('role.'+r)}</option>`).join('')}</select></label>
       ${errBox(ph.err)}
       <button class="btn pri" data-a="regSubmit">${tx('reg.submit')}</button>
       <div class="note">${tx('reg.note')}</div></div>`;
   },
-  pending(){const r=resOf(ph.persona,ph.room);return `${roomHero(ph.room)}<div class="state-hero"><div class="state-ic warn">…</div><h3>${tx('pend.h')}</h3><p class="muted" style="font-size:12.5px">${tx('pend.p',{r:roomK(ph.room),t:r?fmt(r.reqAt):''})}</p></div><div class="note">${tx('pend.note')}</div>${callBar()}`},
+  pending(){const r=resOf(ph.persona,ph.room);return `${roomHero(ph.room)}<div class="state-hero"><div class="state-ic warn">…</div><h3>${tx('pend.h')}</h3><p class="muted" style="font-size:12.5px">${tx('pend.p',{r:roomK(ph.room),t:r?fmt(r.reqAt):''})}</p></div>${callBar()}`},
   sso(){
     const r=S.residents.find(x=>x.id===ph.sso);
     if(!r||r.status!=='sso')return `<div class="state-hero"><div class="state-ic bad">!</div><h3>${tx('sso.invalid')}</h3></div>`;
@@ -1267,12 +1415,19 @@ const PAGES={
     <button class="tile" data-a="liffTab" data-p="info"><b>${tx('rich.info')}</b><span>${tx('tile.info')}</span></button>
     ${latest?`<div class="l-card"><span class="eyebrow">${tx('latest')}</span><div style="display:flex;justify-content:space-between;gap:8px;margin-top:4px;align-items:start"><div><b style="font-size:13px">${ex(latest.title)}</b><br><small class="mono muted">${latest.id}</small></div>${stChip(latest.status)}</div><button class="btn sm" style="margin-top:7px" data-a="openTicket" data-id="${latest.id}">${tx('lnk')}</button></div>`:''}`;
   },
+  scan(){
+    const r=resOf(ph.persona,ph.room),p=P(ph.persona),open=S.tickets.filter(x=>x.persona===ph.persona&&x.room===ph.room&&x.status!=='done');
+    return `<div class="state-hero"><div class="state-ic ok">✓</div><h3>${tx('scan.h')}</h3><p class="muted" style="font-size:11.5px">${tx('scan.p')}</p></div>
+    <div class="l-card"><dl class="kv"><dt>${tx('reg.name')}</dt><dd>${ex(r.data.name)}</dd><dt>${tx('ri.unit')}</dt><dd>${ex(roomK(ph.room))}</dd><dt>${tx('reg.role')}</dt><dd>${tx('role.'+r.role)}</dd><dt>${tx('ri.line')}</dt><dd>${esc(p.line)}</dd><dt>QR</dt><dd class="mono">${esc(memCode(ph.persona,ph.room))}</dd></dl></div>
+    ${open.length?`<div class="l-card"><span class="eyebrow">${tx('scan.open')}</span>${open.map(x=>`<div style="display:flex;justify-content:space-between;gap:6px;margin-top:6px;align-items:center"><button class="lnk" data-a="openTicket" data-id="${x.id}">${x.id}</button>${stChip(x.status)}</div>`).join('')}</div>`:''}`;
+  },
   info(){
     const r=resOf(ph.persona,ph.room),p=P(ph.persona);
     return `<h3>${tx('rich.info')}</h3>${roomHero(ph.room)}
     <div class="l-card"><dl class="kv"><dt>${tx('reg.name')}</dt><dd>${ex(r.data.name)}</dd><dt>${tx('reg.phone')}</dt><dd>${esc(r.data.phone)}</dd><dt>${tx('ri.unit')}</dt><dd>${ex(roomK(ph.room))}</dd>
       <dt>${tx('reg.role')}</dt><dd>${tx('role.'+r.role)}</dd><dt>${tx('ri.since')}</dt><dd>${fmtD(r.since)}</dd><dt>${tx('ri.line')}</dt><dd>${esc(p.line)}<br><small class="mono muted">${esc(p.uid||'')}</small></dd></dl>
       <div style="margin-top:8px">${chip(t('ri.ver'),'ok')}</div></div>
+    ${(()=>{const open=S.tickets.filter(x=>x.persona===ph.persona&&x.room===ph.room&&x.status!=='done').sort((a,b)=>b.last-a.last);return open.length?`<div class="l-card"><span class="eyebrow">${tx('scan.open')}</span>${open.map(x=>`<button class="ri-tk" data-a="openTicket" data-id="${x.id}"><span><b>${ex(x.title)}</b><small class="mono">${x.id}</small></span>${stChip(x.status)}</button>`).join('')}</div>`:''})()}
     <p class="muted" style="font-size:11.5px">${tx('ri.change')}</p>${callBar()}
     <div class="l-card" style="display:grid;gap:6px;justify-items:center;text-align:center"><span class="eyebrow">${tx('ri.qr')}</span><div class="qr-me" id="qr-me" data-code="${esc(memCode(ph.persona,ph.room))}"></div><b class="mono" style="font-size:12px">${esc(memCode(ph.persona,ph.room))}</b><small class="muted">${tx('ri.qrP')}</small></div>`;
   },
@@ -1291,7 +1446,8 @@ const PAGES={
     const a=ph.edit?AP(ph.edit):null,v=a||{type:'AC',brand:'',model:'',year:'',loc:'bed'};
     return `<div><span class="eyebrow">${tx(a?'form.edit':'form.add')}</span></div>
     <div class="form">
-      <label>${tx('f.type')}<select id="f-type">${APPL.map(c=>`<option value="${c}" ${c===v.type?'selected':''}>${tx('ap.'+c)}</option>`).join('')}</select></label>
+      <label>${tx('f.type')}<select id="f-type">${APPL.map(c=>`<option value="${c}" ${c===(ph.fType||v.type)?'selected':''}>${tx('ap.'+c)}</option>`).join('')}</select></label>
+      ${(ph.fType||v.type)==='OT'?`<label>${tx('ap.otherP')}<input id="f-oth" value="${esc(v.other||'')}"></label>`:''}
       <div class="row2"><label>${tx('f.brand')}<input id="f-brand" value="${esc(v.brand)}"></label><label>${tx('f.year')}<input id="f-year" type="number" min="1990" max="${CUR_YEAR}" value="${esc(v.year)}"></label></div>
       <label>${tx('f.model')}<input id="f-model" class="mono" value="${esc(v.model)}"></label>
       <label>${tx('f.loc')}<select id="f-loc">${LOCS.map(l=>`<option value="${l}" ${l===v.loc?'selected':''}>${tx('loc.'+l)}</option>`).join('')}</select></label>
@@ -1358,7 +1514,8 @@ function typeBox(){
       <div id="r-apbox" style="display:grid;gap:9px">${apBox(sel)}</div>${slotSel(grpOf('app',sel))}`;
   }
   if(DISP[k])return h+tipsFor(k)+slotSel(grpOf(k));
-  if(k==='complaint')return `<label>${tx('r.topic')}<select id="r-topic">${CTOP.map(c=>`<option value="${c}">${tx('ct.'+c)}</option>`).join('')}</select></label>
+  if(k==='complaint')return `<label>${tx('r.topic')}<select id="r-topic">${CTOP.map(c=>`<option value="${c}" ${c===(ph.ctopic||'noise')?'selected':''}>${tx('ct.'+c)}</option>`).join('')}</select></label>
+    <input id="r-topico" placeholder="${tx('ct.otherP')}" ${ph.ctopic==='other'?'':'hidden'}>
     <label>${tx('r.where')}<input id="r-where" placeholder="${tx('r.whereP')}"></label>
     <label>${tx('r.when')}<input id="r-when" placeholder="${tx('r.whenP')}"></label>
     <label class="check"><input type="checkbox" id="r-anon" checked> <span>${tx('r.anon')}</span></label>`;
@@ -1404,11 +1561,11 @@ function renderAdmin(){
   const newT=S.tickets.filter(x=>x.unread).length;
   /* role-based view: manager sees everything; admin can't approve; technician sees only their own jobs */
   const role=adm.role||'mgr';
-  const TABS={mgr:['req','chats','sched','appr','war','props'],adm:['req','chats','sched','war','props'],tech:['req','sched']}[role];
+  const TABS={mgr:['dash','req','chats','sched','appr','war','props','rep'],adm:['dash','req','chats','sched','war','props','rep'],tech:['req','sched']}[role];
   if(!TABS.includes(adm.tab))adm.tab='req';
-  const NAVIC={req:'inbox',chats:'chat',sched:'calendar',appr:'approve',war:'shield',props:'building'};
+  const NAVIC={dash:'chart',rep:'report',req:'inbox',chats:'chat',sched:'calendar',appr:'approve',war:'shield',props:'building'};
   const nav=(k,l,b)=>TABS.includes(k)?`<button data-a="admTab" data-t="${k}" aria-current="${adm.tab===k}" title="${tx(l)}">${ic(NAVIC[k])}<span>${tx(l)}</span>${b||''}</button>`:'';
-  const body={req:viewReq,chats:viewChats,sched:viewSched,appr:viewAppr,war:viewWar,props:viewProps}[adm.tab]();
+  const body={dash:viewDash,rep:viewRep,req:viewReq,chats:viewChats,sched:viewSched,appr:viewAppr,war:viewWar,props:viewProps}[adm.tab]();
   const warDue=TABS.includes('war')?warRows(180).filter(o=>!warN()[o.a.id]&&warRes(o.a).length).length:0;
   const unseen=role==='tech'?[]:S.seTickets.filter(x=>!x.seen).sort((a,b)=>b.last-a.last);
   const al=unseen[0];
@@ -1417,11 +1574,14 @@ function renderAdmin(){
   const roleBar=`<span class="se-role" title="${tx('role.lbl')}">${ic('users')}<select id="a-role" aria-label="${tx('role.lbl')}">${['mgr','adm','tech'].map(r=>`<option value="${r}" ${r===role?'selected':''}>${tx('arole.'+r)}</option>`).join('')}</select>
     ${role==='tech'?`<select id="a-techid">${[1,2,3,4,5,6,7].map(i=>`<option value="${i}" ${i===+adm.techId?'selected':''}>${tx('tech.'+i)}</option>`).join('')}</select>`:''}
     ${role!=='mgr'?tip(role==='adm'?t('arole.noteAdm'):t('arole.noteTech',{t:t('tech.'+adm.techId)})):''}</span>`;
-  const search=`<div class="asearch" role="search"><input id="a-q" type="search" placeholder="${tx('srch.p')}" title="${tx('srch.p')}" autocomplete="off" value="${esc(adm.q||'')}"><button class="btn sm icon" data-a="aSearch" title="${tx('srch.btn')}" aria-label="${tx('srch.btn')}">${ic('search')}</button>${adm.q?`<button class="btn sm icon" data-a="aSearchClear" title="${tx('srch.clear')}" aria-label="${tx('srch.clear')}">${ic('x')}</button>`:''}</div>`;
-  const html=`<div class="strip"><span>${tx('pane.admin')}</span>${roleBar}</div>
-    <div class="adm-top"><nav>${nav('req','nav.req',newT?`<span class="badge">${newT}</span>`:'')}${nav('chats','nav.chats',unseen.length?`<span class="badge">${unseen.length}</span>`:'')}${nav('sched','nav.sched','')}${nav('appr','nav.appr',pend?`<span class="badge soft">${pend}</span>`:'')}${nav('war','nav.war',warDue?`<span class="badge soft">${warDue}</span>`:'')}${nav('props','nav.props','')}</nav>${search}</div>
-    ${alert}<div class="adm-main">${body}</div>`;
-  preserve(document.getElementById('admin'),html);
+  const search=`<div class="asearch" role="search">${role==='tech'?bellBtn():''}<input id="a-q" type="search" placeholder="${tx('srch.p')}" title="${tx('srch.p')}" autocomplete="off" value="${esc(adm.q||'')}"><button class="btn sm icon" data-a="aSearch" title="${tx('srch.btn')}" aria-label="${tx('srch.btn')}">${ic('search')}</button>${adm.q?`<button class="btn sm icon" data-a="aSearchClear" title="${tx('srch.clear')}" aria-label="${tx('srch.clear')}">${ic('x')}</button>`:''}</div>`;
+  const vt=`<span class="vtog" role="group" aria-label="${tx('view.lbl')}"><button data-a="admView" data-v="pc" aria-pressed="${adm.view!=='m'}">${ic('monitor')}${tx('view.pc')}</button><button data-a="admView" data-v="m" aria-pressed="${adm.view==='m'}">${ic('phone')}${tx('view.m')}</button></span>`;
+  const bell=role==='tech'?techBell():'';
+  const html=`<div class="strip"><span>${tx('pane.admin')}</span><span class="strip-r">${vt}${roleBar}</span></div>
+    <div class="adm-top"><nav>${nav('dash','nav.dash','')}${nav('req','nav.req',newT?`<span class="badge">${newT}</span>`:'')}${nav('chats','nav.chats',unseen.length?`<span class="badge">${unseen.length}</span>`:'')}${nav('sched','nav.sched','')}${nav('appr','nav.appr',pend?`<span class="badge soft">${pend}</span>`:'')}${nav('war','nav.war',warDue?`<span class="badge soft">${warDue}</span>`:'')}${nav('props','nav.props','')}${nav('rep','nav.rep','')}</nav>${search}</div>
+    ${bell}${alert}<div class="adm-main">${body}</div>`;
+  const ael=document.getElementById('admin');ael.classList.toggle('mview',adm.view==='m');
+  preserve(ael,html);
   if(adm.tab==='props'&&adm.room)drawQR('qr-box',qrUrl(R(adm.room)),132);
 }
 /* ---- chats arriving through Social Engagement ---- */
@@ -1477,19 +1637,128 @@ function viewWar(){
       <td style="text-align:right">${n?chip(t('war.sent',{t:fmt(n)}),'ok'):rs.length?`<button class="btn sm ibtn" data-a="warNotify" data-id="${a.id}">${ic('bell')}${tx('war.notify')}</button>`:''}</td></tr>`}).join(''):`<tr><td colspan="5" class="muted">${tx('war.empty')}</td></tr>`}
     </tbody></table></div></div>`;
 }
+/* ---- request data for the dashboard and reports: live cases + generated sample history ---- */
+let HIST=null;
+function hist(){
+  if(HIST)return HIST;
+  let a=20261113;const rnd=()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
+  const rooms=Object.keys(S.rooms),W=['water','water','water','app','app','app','app','key','elec','gas','glass','complaint','complaint','common','other'],T0=sod(Date.now()),out=[];
+  for(let i=0;i<160;i++){const dAgo=1+Math.floor(rnd()*90),type=W[Math.floor(rnd()*W.length)],created=T0-dAgo*864e5+(8+Math.floor(rnd()*13))*36e5+Math.floor(rnd()*60)*6e4;
+    const ch=rnd()<.66?'line':rnd()<.6?'call':'chat',resp=4+Math.floor(rnd()*rnd()*110),solveH=dAgo>3||rnd()<.5?Math.round(1+rnd()*rnd()*60):null;
+    out.push({created,type,room:rooms[Math.floor(rnd()*rooms.length)],ch,status:solveH?'done':['accepted','in_progress','waiting'][Math.floor(rnd()*3)],resp,solveH,tech:0})}
+  out.sort((x,y)=>x.created-y.created);const seq={};
+  out.forEach(o=>{const d=new Date(o.created),k=PREFIX[o.type]+'-'+String(d.getFullYear()).slice(2)+pad(d.getMonth()+1);seq[k]=(seq[k]||0)+1;o.id=k+'-S'+pad(seq[k])});
+  return HIST=out;
+}
+function liveRecs(){return S.tickets.map(x=>{const f=x.log.find(l=>l.k!=='created'&&l.at>x.created),dn=x.status==='done'?x.log.filter(l=>l.k==='status'&&l.s==='done').pop():null;
+  return {id:x.id,created:x.created,type:x.type,room:x.room,ch:x.ch||'line',status:x.status,resp:f?Math.max(1,Math.round((f.at-x.created)/6e4)):null,solveH:dn?Math.max(1,Math.round((dn.at-x.created)/36e5)):null,tech:x.tech}})}
+const recsIn=(from,to)=>hist().concat(liveRecs()).filter(r=>r.created>=from&&r.created<to+864e5).sort((a,b)=>b.created-a.created);
+const avg=a=>a.length?Math.round(a.reduce((p,c)=>p+c,0)/a.length):0;
+const ymd=ts=>{const d=new Date(ts);return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())};
+function barList(items){const mx=Math.max(1,...items.map(i=>i.n));return `<div class="bars">${items.map(i=>`<div class="bar-r"><span class="bar-l">${i.icon?ic(i.icon):''}<span>${esc(i.label)}</span></span><span class="bar-t"><i style="width:${Math.round(i.n/mx*100)}%"></i></span><b>${i.n}</b></div>`).join('')}</div>`}
+function viewDash(){
+  const win=adm.dashWin||'30',T=sod(S.clock),from=win==='m'?(()=>{const b=new Date(T);b.setDate(1);return b.getTime()})():T-(+win-1)*864e5;
+  const rs=recsIn(from,T),done=rs.filter(r=>r.status==='done'),open=rs.length-done.length;
+  const resp=avg(rs.map(r=>r.resp).filter(Boolean)),solve=avg(done.map(r=>r.solveH).filter(Boolean)),lineP=rs.length?Math.round(rs.filter(r=>r.ch==='line').length/rs.length*100):0;
+  const kpi=(icon,label,val,cls='')=>`<div class="kpi ${cls}"><span class="kpi-l">${ic(icon)}${esc(label)}</span><b>${val}</b></div>`;
+  const types=[...new Set(rs.map(r=>r.type))].map(k=>({label:t('rt.'+k),icon:TYPEIC[k],n:rs.filter(r=>r.type===k).length})).sort((a,b)=>b.n-a.n);
+  const props=S.props.map(p=>({label:t('prop.'+p),icon:'building',n:rs.filter(r=>R(r.room)&&R(r.room).prop===p).length}));
+  const chs=['line','call','chat'].map(c=>({label:t('ch.'+c),icon:c==='call'?'phone':'chat',n:rs.filter(r=>r.ch===c).length}));
+  const days=Math.round((T-from)/864e5)+1,cnt=[];for(let i=0;i<days;i++){const d=from+i*864e5;cnt.push({d,n:rs.filter(r=>r.created>=d&&r.created<d+864e5).length})}
+  const mx=Math.max(1,...cnt.map(c=>c.n));
+  const now=[kpi('approve',t('dash.pendAppr'),S.residents.filter(r=>r.status==='pending').length+S.requests.filter(r=>r.status==='pending').length,'soft'),kpi('chat',t('dash.chatOpen'),S.seTickets.filter(x=>!['done','deleted','spam'].includes(x.status)).length,'soft'),kpi('ask',t('dash.waitRes'),S.tickets.filter(x=>x.status==='waiting').length,'soft'),kpi('shield',t('nav.war'),warRows(180).length,'soft')].join('');
+  return `<div class="pad"><h3 class="h4i">${ic('chart')}${tx('nav.dash')}${tip(t('dash.note'))}</h3>
+    <div class="daytabs">${['7','30','m'].map(n=>`<button data-a="dashWin" data-n="${n}" aria-pressed="${win===n}">${n==='m'?tx('sch.monthV'):tx('war.win',{n})}</button>`).join('')}</div>
+    <div class="kpis">${kpi('inbox',t('dash.total'),rs.length)}${kpi('activity',t('dash.open'),open)}${kpi('approve',t('dash.done'),done.length)}${kpi('clock',t('dash.resp'),tx('dash.min',{n:resp}))}${kpi('wrench',t('dash.solve'),tx('dash.hr',{n:solve}))}${kpi('chat',t('dash.line'),lineP+'%')}</div>
+    <div class="box">${h4i('chart',t('dash.trend'))}<div class="trend">${cnt.map(c=>`<span title="${esc(fmtShort(c.d))}: ${c.n}"><i style="height:${Math.round(c.n/mx*100)}%"></i></span>`).join('')}</div><div class="trend-x"><span>${esc(fmtShort(from))}</span><span>${esc(fmtShort(T))}</span></div></div>
+    <div class="dgrid"><div class="box">${h4i('help',t('dash.byType'))}${barList(types)}</div><div class="box">${h4i('building',t('dash.byProp'))}${barList(props)}<h4 class="h4i" style="margin-top:6px">${ic('chat')}<span>${tx('dash.byCh')}</span></h4>${barList(chs)}</div></div>
+    <div class="box">${h4i('activity',t('dash.now'))}<div class="kpis">${now}</div></div></div>`;
+}
+function repRows(){
+  const T=sod(S.clock);if(adm.rpFrom==null)adm.rpFrom=T-29*864e5;if(adm.rpTo==null)adm.rpTo=T;
+  return recsIn(Math.min(adm.rpFrom,adm.rpTo),Math.max(adm.rpFrom,adm.rpTo)).filter(r=>(!adm.rpProp||adm.rpProp==='all'||(R(r.room)&&R(r.room).prop===adm.rpProp))&&(!adm.rpType||adm.rpType==='all'||r.type===adm.rpType));
+}
+function viewRep(){
+  const rows=repRows(),types=[...new Set(hist().map(r=>r.type).concat(S.tickets.map(x=>x.type)))];
+  const cols=[t('col.id'),t('col.date'),t('rq.type'),t('ri.unit'),t('col.ch'),t('th.status'),t('col.resp'),t('sch.tech')];
+  return `<div class="pad"><h3 class="h4i">${ic('report')}${tx('rep.h')}${tip(t('rep.p'))}</h3>
+    <div class="box"><div class="daytabs">${['7','30','m'].map(n=>`<button data-a="repQuick" data-n="${n}">${n==='m'?tx('sch.monthV'):tx('war.win',{n})}</button>`).join('')}</div>
+      <div class="repf"><label>${tx('rep.from')}<input class="in" type="date" id="rp-from" value="${ymd(adm.rpFrom)}"></label><label>${tx('rep.to')}<input class="in" type="date" id="rp-to" value="${ymd(adm.rpTo)}"></label>
+      <label>${tx('nc.prop')}<select class="in" id="rp-prop"><option value="all">${tx('rep.all')}</option>${S.props.map(p=>`<option value="${p}" ${adm.rpProp===p?'selected':''}>${tx('prop.'+p)}</option>`).join('')}</select></label>
+      <label>${tx('rq.type')}<select class="in" id="rp-type"><option value="all">${tx('rep.all')}</option>${types.map(k=>`<option value="${k}" ${adm.rpType===k?'selected':''}>${tx('rt.'+k)}</option>`).join('')}</select></label></div>
+      <div class="repx"><b>${tx('rep.rows',{n:rows.length})}</b><span style="display:flex;gap:6px;flex-wrap:wrap"><button class="btn sm pri ibtn" data-a="repExport" data-f="csv" ${rows.length?'':'disabled'}>${ic('download')}${tx('rep.csv')}</button><button class="btn sm ibtn" data-a="repExport" data-f="xlsx" ${rows.length?'':'disabled'}>${ic('download')}${tx('rep.xlsx')}</button></span></div>
+      ${adm.rpMsg?`<div class="hint-box">${esc(adm.rpMsg)}</div>`:''}</div>
+    <div class="box">${h4i('file',t('rep.preview'))}${rows.length?`<div class="tbl-wrap"><table><thead><tr>${cols.map(c=>`<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>
+      ${rows.slice(0,10).map(r=>`<tr><td class="mono">${r.id}</td><td class="num">${esc(fmt(r.created))}</td><td>${tx('rt.'+r.type)}</td><td>${R(r.room)?ex(unitK(r.room)):''}<br><small class="muted">${R(r.room)?tx('prop.'+R(r.room).prop):''}</small></td><td>${tx('ch.'+r.ch)}</td><td>${stChip(r.status)}</td><td class="num">${r.resp?tx('dash.min',{n:r.resp}):'—'}</td><td>${r.tech?tx('tech.'+r.tech):'—'}</td></tr>`).join('')}</tbody></table></div>`:`<p class="muted">${tx('rep.none')}</p>`}</div></div>`;
+}
+/* ---- technician bell: jobs newly assigned to me + jobs coming up in the next 24 hours ---- */
+function slotTs(s){if(!isTimed(s))return null;const [d,h]=s.split('-').map(Number);const b=new Date(d>100?d:S.clock+d*864e5);b.setHours(h,0,0,0);return b.getTime()}
+function techNotes(){
+  const me=+adm.techId,seen=(adm.seen||(adm.seen={}))[me]||[];
+  const mine=S.tickets.filter(x=>x.tech===me&&x.status!=='done');
+  const asg=mine.filter(x=>!seen.includes('a:'+x.id)).sort((a,b)=>b.last-a.last);
+  const soon=mine.map(x=>({x,ts:slotTs(x.slot)})).filter(o=>o.ts&&o.ts>=S.clock-36e5&&o.ts<=S.clock+864e5).sort((a,b)=>a.ts-b.ts);
+  return {mine:mine.sort((a,b)=>b.last-a.last),asg,soon,unseen:asg.length+soon.filter(o=>!seen.includes('u:'+o.x.id)).length};
+}
+function techBell(){
+  const n=techNotes();
+  const row=(x,extra)=>`<button class="bell-i" data-a="bellGo" data-id="${x.id}"><span><b>${ex(x.title)}</b><small><span class="mono">${x.id}</span> · ${ex(unitK(x.room))}</small></span>${extra}</button>`;
+  return adm.bell?`<div class="bellbar"><div class="bellpanel">${n.mine.length||n.soon.length?'':`<p class="muted" style="font-size:12px">${tx('bell.none')}</p>`}
+      ${n.mine.length?`<span class="eyebrow">${tx('bell.asg')}</span>${n.mine.map(x=>row(x,(adm.bellNew||[]).includes(x.id)?chip(t('bell.new'),'bad'):stChip(x.status))).join('')}`:''}
+      ${n.soon.length?`<span class="eyebrow">${tx('bell.soon')}</span>${n.soon.map(o=>row(o.x,chip(slotLabel(o.x.slot),'warn'))).join('')}`:''}</div></div>`:'';
+}
+function bellBtn(){const n=techNotes();return `<button class="bellbtn" data-a="bellToggle" aria-expanded="${!!adm.bell}" title="${tx('bell.h')}" aria-label="${tx('bell.h')}">${ic('bell')}${n.unseen?`<span class="badge">${n.unseen}</span>`:''}</button>`;
+}
 /* ---- every technician's booked slots ---- */
 const SCH_G=['ac','plumb','lock','glass','elec','gas'];
 const G2TYPE={ac:'app',plumb:'water',lock:'key',glass:'glass',elec:'elec',gas:'gas'};
+const sod=ts=>{const d=new Date(ts);d.setHours(0,0,0,0);return d.getTime()};
+const schedModes=()=>`<div class="daytabs"><button data-a="schedMode" data-m="hour" aria-pressed="${adm.schedMode!=='month'}">${ic('clock')} ${tx('sch.hourV')}</button><button data-a="schedMode" data-m="month" aria-pressed="${adm.schedMode==='month'}">${ic('calendar')} ${tx('sch.monthV')}</button></div>`;
 function viewSched(){
+  const isTech=adm.role==='tech',myG=isTech?techGroup(adm.techId):null;
+  if(adm.schedMode==='month')return viewSchedMonth(isTech,myG);
+  return adm.view==='m'?viewSchedAgenda(isTech,myG):viewSchedHour();
+}
+/* month overview, like a calendar app */
+function viewSchedMonth(isTech,myG){
+  const base=new Date(S.clock);base.setHours(0,0,0,0);base.setDate(1);base.setMonth(base.getMonth()+(adm.schedMon||0));
+  const loc=LANG==='th'?'th-TH':LANG==='ja'?'ja-JP':'en-US',title=base.toLocaleDateString(loc,{month:'long',year:'numeric'});
+  const per={};Object.entries(S.book).forEach(([k,n])=>{const [g,sl]=k.split('|');if(!n||!isTimed(sl)||(isTech&&g!==myG))return;const ts=sod(slotTs(sl)),o=per[ts]||(per[ts]={rep:0,ins:0});o[g==='ins'?'ins':'rep']+=n});
+  const insSet=INS_DAYS.map(sod),today=sod(S.clock),showIns=!isTech||myG==='ins';
+  const WD={en:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],th:['จ.','อ.','พ.','พฤ.','ศ.','ส.','อา.'],ja:['月','火','水','木','金','土','日']}[LANG];
+  const lead=(base.getDay()+6)%7,dim=new Date(base.getFullYear(),base.getMonth()+1,0).getDate(),weeks=Math.ceil((lead+dim)/7);
+  let cells='';
+  for(let i=0;i<weeks*7;i++){const d=new Date(base.getFullYear(),base.getMonth(),1-lead+i),ts=d.getTime(),o=per[ts]||{rep:0,ins:0},off=Math.round((ts-today)/864e5);
+    const isIns=showIns&&insSet.includes(ts),go=(DAYS.includes(off)&&!isTech)||(DAYS.includes(off)&&isTech&&myG!=='ins')||isIns;
+    const ids=S.tickets.filter(x=>x.status!=='done'&&isTimed(x.slot)&&(!isTech||x.grp===myG)&&sod(slotTs(x.slot))===ts).sort((a,b)=>slotTs(a.slot)-slotTs(b.slot)).map(x=>x.id);
+    cells+=`<div class="mc ${d.getMonth()===base.getMonth()?'':'out'} ${ts===today?'today':''} ${go?'go':''}" ${go?`data-a="schedDate" data-ts="${ts}" role="button" tabindex="0"`:''}><span class="mc-d">${d.getDate()===1?esc(fmtShort(ts)):d.getDate()}</span>${o.rep?`<span class="mpill rep">${tx('sch.repN',{n:o.rep})}</span>`:''}${isIns&&o.ins?`<span class="mpill ins">${tx('sch.insN',{n:o.ins})}</span>`:''}${ids.slice(0,3).map(id=>`<button class="caselnk" data-a="gotoCase" data-id="${id}">${id}</button>`).join('')}${ids.length>3?`<small class="muted">+${ids.length-3}</small>`:''}</div>`}
+  return `<div class="pad"><h3 class="h4i">${ic('calendar')}${tx('sch.h')}${tip(t('sch.pick'))}</h3>${schedModes()}
+    <div class="mbar"><button class="btn sm" data-a="schedMon" data-n="0">${tx('sch.today')}</button><button class="btn sm icon" data-a="schedMon" data-n="-1" aria-label="prev">${ic('chevL')}</button><button class="btn sm icon" data-a="schedMon" data-n="1" aria-label="next">${ic('chevR')}</button><b>${esc(title)}</b></div>
+    <div class="mcal"><div class="mhead">${WD.map(w=>`<span>${w}</span>`).join('')}</div><div class="mgrid">${cells}</div></div></div>`;
+}
+/* hourly view laid out top-to-bottom for phones (no sideways scrolling) */
+function viewSchedAgenda(isTech,myG){
+  const day=adm.schedDay||0,groups=isTech?SCH_G.filter(g=>g===myG):SCH_G,showIns=!isTech||myG==='ins';
+  const insDay=INS_DAYS.includes(adm.insDay)?adm.insDay:INS_DAYS[0];
+  const chipC=(g,s)=>{const cap=capOf(g),n=booked(g,s),ids=S.tickets.filter(x=>x.grp===g&&x.slot===s).map(x=>x.id),cls=n>=cap?'full':n>0?'part':'free';
+    return `<span class="agc sc-${cls}" title="${tx('tech.'+GRP_TECH[g])}">${g==='ins'?ic('clipboard'):ic({ac:'plug',plumb:'droplet',lock:'key',glass:'window',elec:'zap',gas:'flame'}[g])}<b>${n}/${cap}</b>${ids.length?ids.map(id=>`<button class="caselnk" data-a="gotoCase" data-id="${id}">${id}</button>`).join(''):''}${n<cap&&!isTech&&g!=='ins'?`<button class="iconbtn" data-a="schedBook" data-g="${g}" data-s="${s}" aria-label="${tx('sch.book')}">+</button>`:''}</span>`};
+  return `<div class="pad"><h3 class="h4i">${ic('calendar')}${tx('sch.h')}${tip(t(isTech?'sch.pTech':'sch.p')+' '+t('sch.legend',{c:CAP}))}</h3>${schedModes()}
+    ${groups.length?`<div class="daytabs">${DAYS.map(d=>`<button data-a="schedDay" data-n="${d}" aria-pressed="${day===d}">${esc(dayLabel(d))}</button>`).join('')}</div>
+    ${isTech?'':`<div class="aglegend">${groups.map(g=>`<span>${ic({ac:'plug',plumb:'droplet',lock:'key',glass:'window',elec:'zap',gas:'flame'}[g])}${tx('tech.'+GRP_TECH[g])}</span>`).join('')}</div>`}
+    <div class="agenda">${HOURS.map(h=>`<div class="ag-row"><div class="ag-h">${pad(h)}:00</div><div class="ag-cells">${groups.map(g=>chipC(g,day+'-'+h)).join('')}</div></div>`).join('')}</div>`:''}
+    ${showIns?`<div class="box">${h4i('clipboard',t('sch.ins'))}<div class="daytabs">${INS_DAYS.map(d=>`<button data-a="schedIns" data-n="${d}" aria-pressed="${insDay===d}">${esc(dayLabel(d))}</button>`).join('')}</div>
+    <div class="agenda">${HOURS.map(h=>`<div class="ag-row"><div class="ag-h">${pad(h)}:00</div><div class="ag-cells">${chipC('ins',insDay+'-'+h)}</div></div>`).join('')}</div></div>`:''}</div>`;
+}
+function viewSchedHour(){
   const day=adm.schedDay||0;
   const isTech=adm.role==='tech',myG=isTech?techGroup(adm.techId):null;
   const cell=(g,s)=>{const cap=capOf(g),n=booked(g,s),ids=S.tickets.filter(x=>x.grp===g&&x.slot===s).map(x=>x.id),others=Math.max(0,n-ids.length),cls=n>=cap?'full':n>0?'part':'free';
     return `<td class="sc-${cls}"><div class="scell"><b>${n}/${cap}</b>${n>=cap?'':(isTech||g==='ins'?'':`<button class="btn sm icon" data-a="schedBook" data-g="${g}" data-s="${s}" title="${tx('sch.book')}" aria-label="${tx('sch.book')}">${ic('plus')}</button>`)}</div>
-      ${ids.length?`<div class="mono" style="font-size:10px;margin-top:3px">${ids.join(', ')}</div>`:''}${others?`<div class="muted" style="font-size:10px" title="${tx('sch.others',{n:others})}">+${others}</div>`:''}</td>`};
+      ${ids.length?`<div class="cases">${ids.map(id=>`<button class="caselnk" data-a="gotoCase" data-id="${id}">${id}</button>`).join('')}</div>`:''}${others?`<div class="muted" style="font-size:10px" title="${tx('sch.others',{n:others})}">+${others}</div>`:''}</td>`};
   const groups=isTech?SCH_G.filter(g=>g===myG):SCH_G;
   const showIns=!isTech||myG==='ins';
   const insDay=INS_DAYS.includes(adm.insDay)?adm.insDay:INS_DAYS[0];
-  return `<div class="pad"><h3 class="h4i">${ic('calendar')}${tx('sch.h')}${tip(t(isTech?'sch.pTech':'sch.p')+' '+t('sch.legend',{c:CAP}))}<span class="legend"><i class="sc-free"></i><i class="sc-part"></i><i class="sc-full"></i></span></h3>
+  return `<div class="pad"><h3 class="h4i">${ic('calendar')}${tx('sch.h')}${tip(t(isTech?'sch.pTech':'sch.p')+' '+t('sch.legend',{c:CAP}))}<span class="legend"><i class="sc-free"></i><i class="sc-part"></i><i class="sc-full"></i></span></h3>${schedModes()}
     ${groups.length?`<div class="daytabs">${DAYS.map(d=>`<button data-a="schedDay" data-n="${d}" aria-pressed="${day===d}">${esc(dayLabel(d))}</button>`).join('')}</div>
     <div class="tbl-wrap"><table class="sched"><thead><tr><th>${tx('sch.tech')}</th>${HOURS.map(h=>`<th>${hourLabel(h)}</th>`).join('')}</tr></thead><tbody>
     ${groups.map(g=>`<tr><td title="${tx('tech.'+GRP_TECH[g])}"><span class="ibtn"><span class="tico acc">${ic({ac:'plug',plumb:'droplet',lock:'key',glass:'window',elec:'zap',gas:'flame'}[g])}</span><b>${tx('tech.'+GRP_TECH[g])}</b></span></td>${HOURS.map(h=>cell(g,day+'-'+h)).join('')}</tr>`).join('')}</tbody></table></div>`:''}
@@ -1543,7 +1812,9 @@ function infoBox(x,active){
   const hist=irs.map(r=>`<div class="irq"><div class="ibtn" style="align-items:flex-start" title="${tx('ir.asked')} · ${fmt(r.at)}">${ic('ask')}<span>${ex(r.q)} <small class="muted">${fmt(r.at)}</small></span></div>
     ${r.ans?`<div class="attc">${r.ans.se?`<span class="mono" style="font-size:11.5px">${r.ans.se}</span>`:''}<div class="sm" style="max-width:100%">${esc(r.ans.text)||'—'}${fileList(r.ans.files)}<small>${fmt(r.ans.at)}</small></div></div>`:`<div class="muted ibtn" style="font-size:11.5px">${ic('clock')}${tx('ir.wait')}</div>`}</div>`).join('');
   if(!active&&!irs.length)return '';
-  return `<div class="box">${h4i('ask',t('ir.h'),(x.status==='waiting'?' '+chip(t('st.waiting'),'bad'):x.status==='replied'?' '+chip(t('st.replied'),'acc'):'')+tip(t('ir.p')))}${hist}
+  const head=foldH('ir','ask',t('ir.h'),(x.status==='waiting'?chip(t('st.waiting'),'bad'):x.status==='replied'?chip(t('st.replied'),'acc'):'')+(irs.length?`<span class="muted" style="font-size:11px">${irs.length}</span>`:'')+tip(t('ir.p')));
+  if(!foldOpen('ir'))return `<div class="box">${head}</div>`;
+  return `<div class="box">${head}${hist}
     ${active?`<div class="qchips">${[0,1,2,3].map(i=>`<button data-a="irTpl" data-n="${i}">${tx('ir.t'+i)}</button>`).join('')}</div>
       <textarea class="ta" id="a-ir" placeholder="${tx('ir.qP')}"></textarea><div><button class="btn pri ibtn" data-a="irSend" title="${tx('ir.send')}">${ic('send')}${tx('ir.sendS')}</button></div>`:''}</div>`;
 }
@@ -1587,9 +1858,11 @@ function viewReq(){
   const contact=onLine?'LINE '+esc(p.line):esc(p?p.phone:(x.caller&&x.caller.phone)||'');
   let rows=kvi(TYPEIC[x.type]||'help',t('rq.type'),`${esc(t('rt.'+x.type))}${DISP[x.type]&&x.type!=='app'?` <span class="muted" style="font-weight:400">· ${tx(DISP[x.type]==='24'?'h24':'hday')}</span>`:''}`)
     +kvi('user',t('rq.res'),`${ex(callerName(x))} <span class="muted" style="font-weight:400">· ${contact}</span> ${chIc(x)}${cbIc(x)}`);
+  const rr=x.persona?resOf(x.persona,x.room):null,tel=(rr&&rr.data&&rr.data.phone)||(p&&p.phone)||(x.caller&&x.caller.phone)||'';
+  if(tel)rows+=kvi('phone',t('nc.phone'),`<a class="mono" href="tel:${esc(tel.replace(/[^0-9+]/g,''))}">${esc(tel)}</a>`);
   if(a)rows+=kvi('plug',t('rq.ap'),`${ex(apTK(a))} · <span class="mono">${esc(a.brand)} ${esc(a.model)}</span> · ${a.year} <span class="muted" style="font-weight:400">(${esc(age(a.year))})</span> ${warOk(a)?`<span class="tico ok" title="${tx('war.yes',{y:warOk(a)})}">${ic('shield')}</span>`:''}`);
   else if(x.apText)rows+=kvi('plug',t('rq.ap'),ex(x.apText));
-  if(x.type==='complaint')rows+=kvi('megaphone',t('rq.topic'),tx('ct.'+x.topic))+kvi('pin',t('rq.where'),x.where?(R(x.where)?ex(roomK(x.where)):esc(x.where)):'—')+kvi('clock',t('rq.when'),ex(x.when)||'—');
+  if(x.type==='complaint')rows+=kvi('megaphone',t('rq.topic'),ex(ctK(x)))+kvi('pin',t('rq.where'),x.where?(R(x.where)?ex(roomK(x.where)):esc(x.where)):'—')+kvi('clock',t('rq.when'),ex(x.when)||'—');
   if(x.type==='common')rows+=kvi('pin',t('rq.where'),esc(x.where)||'—');
   if(x.slot!=null)rows+=kvi('calendar',t('rq.slot'),`${esc(slotLabel(x.slot))}${x.grp&&isTimed(x.slot)?` <span class="muted" style="font-weight:400;font-size:11.5px">· ${booked(x.grp,x.slot)}/${capOf(x.grp)}</span>`:''}`);
   rows+=kvi('file',t('rq.detail'),`<span style="font-weight:400">${ex(x.d)}</span>`);
@@ -1611,10 +1884,10 @@ function viewReq(){
     <div class="box">${h4i('activity',t('rq.status'),tip(t('rq.statusNote')))}<div class="statusbar">${ADM_ST.map(s=>`<button data-a="setStatus" data-s="${s}" aria-pressed="${x.status===s}">${tx('st.'+s)}</button>`).join('')}</div>
       <label class="ibtn" style="font-size:12px;font-weight:700" title="${tx('rq.tech')}">${ic('wrench')}<select class="in" id="a-tech" aria-label="${tx('rq.tech')}" ${role==='tech'?'disabled':''}>${[0,1,2,3,4,5,6,7,8].map(i=>`<option value="${i}" ${i===x.tech?'selected':''}>${tx('tech.'+i)}</option>`).join('')}</select></label></div>
     ${cbBox}
+    ${active?`<div class="box">${foldH('prog','send',t('rq.prog'))}${foldOpen('prog')?`<div class="qchips">${[0,1,2,3,4,5].map(i=>{const q=t('q.'+i);return `<button data-a="quick" data-n="${i}" title="${esc(q)}">${esc(q.length>24?q.slice(0,22)+'…':q)}</button>`}).join('')}</div>
+      <textarea class="ta" id="a-prog" placeholder="${tx('rq.progP')}"></textarea><div><button class="btn pri ibtn" data-a="sendProg" title="${tx('rq.send')}">${ic('send')}${tx('rq.sendS')}</button></div>`:''}</div>`:''}
     ${infoBox(x,active)}
     ${role==='tech'?'':attachBox(x)}
-    ${active?`<div class="box">${h4i('send',t('rq.prog'))}<div class="qchips">${[0,1,2,3,4,5].map(i=>{const q=t('q.'+i);return `<button data-a="quick" data-n="${i}" title="${esc(q)}">${esc(q.length>24?q.slice(0,22)+'…':q)}</button>`}).join('')}</div>
-      <textarea class="ta" id="a-prog" placeholder="${tx('rq.progP')}"></textarea><div><button class="btn pri ibtn" data-a="sendProg" title="${tx('rq.send')}">${ic('send')}${tx('rq.sendS')}</button></div></div>`:''}
     <div class="box">${h4i('history',t('rq.tl'))}<div class="tl">${x.log.slice().reverse().map(l=>`<div>${logLine(l,x)}<small>${fmt(l.at)}</small></div>`).join('')}</div></div>
   </div></div>`;
 }
@@ -1645,7 +1918,7 @@ function viewAppr(){
     const F=[['type','f.type',v=>tx('ap.'+v)],['brand','f.brand',esc],['model','f.model',esc],['year','f.year',esc],['loc','f.loc',v=>tx('loc.'+v)]];
     return `<article class="req"><div class="req-h"><div class="who"><span class="av ${avc(p.id)}">${esc(pfirst(p.id)[0])}</span><div><b>${esc(pname(p.id))}</b> ${chip(t('kind.'+r.kind),r.kind==='add'?'acc':'warn')}<br><small class="muted">${ex(roomK(r.room))} · ${fmt(r.at)}</small></div></div>${r.ticket?chip(t('apv.withTk',{id:r.ticket}),'info'):''}</div>
       <div class="req-b"><div class="tbl-wrap"><table><thead><tr><th>${tx('apv.field')}</th>${before?`<th>${tx('apv.cur')}</th>`:''}<th>${tx(before?'apv.new':'apv.newAp')}</th></tr></thead><tbody>
-      ${F.map(([k,l,f])=>{const ch=before&&String(before[k])!==String(r.data[k]);return `<tr class="${ch?'chg':''}"><td>${tx(l)}</td>${before?`<td class="${k==='model'?'mono':''}">${f(before[k])}</td>`:''}<td class="${k==='model'?'mono':''}">${f(r.data[k])}</td></tr>`}).join('')}</tbody></table></div></div>
+      ${F.map(([k,l,f])=>{const g=o=>k==='type'?ex(apTK(o)):f(o[k]),ch=before&&String(g(before))!==String(g(r.data));return `<tr class="${ch?'chg':''}"><td>${tx(l)}</td>${before?`<td class="${k==='model'?'mono':''}">${g(before)}</td>`:''}<td class="${k==='model'?'mono':''}">${g(r.data)}</td></tr>`}).join('')}</tbody></table></div></div>
       <div class="req-f">${rejUI(r.id)||`<button class="btn danger" data-a="reject" data-id="${r.id}">${tx('btn.reject')}</button><button class="btn pri" data-a="approveAp" data-id="${r.id}">${tx('btn.approve')}</button>`}</div></article>`};
   return `<div class="pad">
     <h3 class="h4i">${ic('users')}${tx('apv.reg')}${tip(t('apv.p'))}</h3>${regs.length?regs.map(regCard).join(''):`<p class="muted" style="font-size:12.5px">${tx('apv.empty')}</p>`}
@@ -1676,7 +1949,7 @@ function viewProps(){
         <div class="addrow"><select class="in" id="n-type">${APPL.map(c=>`<option value="${c}" ${c===(adm.newType||'AC')?'selected':''}>${tx('ap.'+c)}</option>`).join('')}</select>${adm.newType==='OT'?`<input class="in" id="n-oth" placeholder="${tx('ap.otherP')}">`:''}<input class="in" id="n-brand" placeholder="${tx('f.brand')}"><input class="in mono" id="n-model" placeholder="${tx('f.model')}"><input class="in" id="n-year" type="number" placeholder="${CUR_YEAR}"><select class="in" id="n-loc">${LOCS.map(l=>`<option value="${l}">${tx('loc.'+l)}</option>`).join('')}</select><button class="addbtn" data-a="addApAdmin">${tx('pr.add')}</button></div>
         ${adm.err?`<div class="err">${ex(adm.err)}</div>`:''}</div>
       <div class="box">${h4i('users',t('pr.res'))}<div class="tbl-wrap"><table><thead><tr><th>${tx('th.res')}</th><th>${tx('th.status')}</th><th>${tx('th.period')}</th><th></th></tr></thead><tbody>
-        ${rs.length?rs.map(x=>{const p=P(x.persona);return `<tr class="${x.status==='removed'?'gone':''}"><td><b>${ex(x.data.name)}</b><br><small class="muted">LINE ${esc(p.line)} · <span class="mono" title="LINE user ID">${esc(p.uid||'')}</span> · ${tx('role.'+x.role)}</small></td><td>${chip(t('rs.'+x.status),RSK[x.status])}</td><td class="num">${fmtD(x.since)} – ${x.until?fmtD(x.until):tx('present')}</td><td style="text-align:right">${x.status==='active'&&adm.rmRes!==x.id?`<button class="btn sm danger" data-a="rmRes" data-id="${x.id}">${tx('pr.remove')}</button>`:''}</td></tr>
+        ${rs.length?rs.map(x=>{const p=P(x.persona);return `<tr class="${x.status==='removed'?'gone':''}"><td><b>${ex(x.data.name)}</b><br><small class="muted">LINE ${esc(p.line)} · <span class="mono" title="LINE user ID">${esc(p.uid||'')}</span> · ${tx('role.'+x.role)}</small><br><span class="ibtn tel">${ic('phone')}<span class="mono">${esc(x.data.phone||'—')}</span></span></td><td>${chip(t('rs.'+x.status),RSK[x.status])}</td><td class="num">${fmtD(x.since)} – ${x.until?fmtD(x.until):tx('present')}</td><td style="text-align:right">${x.status==='active'&&adm.rmRes!==x.id?`<button class="btn sm danger" data-a="rmRes" data-id="${x.id}">${tx('pr.remove')}</button>`:''}</td></tr>
           ${adm.rmRes===x.id?`<tr><td colspan="4"><div class="confirm">${tx('pr.removeQ',{n:x.data.name})}<button class="btn sm" data-a="rmCancel">${tx('btn.cancel')}</button><button class="btn sm danger solid" data-a="rmConfirm" data-id="${x.id}">${tx('pr.removeBtn')}</button></div></td></tr>`:''}`}).join(''):`<tr><td colspan="4" class="muted">${tx('pr.nores')}</td></tr>`}
       </tbody></table></div></div></div>
       <div class="qr-card"><span class="eyebrow h4i">${ic('qr')}${tx('pr.qr')}${tip(t('pr.qrNote'))}</span><div class="qr-box" id="qr-box"></div><b class="mono">${r.qr}</b></div></div>`;
@@ -1781,7 +2054,7 @@ function newTicket(type,extra){
 function submitTicket(x,note){
   S.tickets.push(x);
   /* the LIFF sends a plain-text summary into the chat as the resident → Social Engagement receives it like any chat */
-  fromUser(ph.persona,{text:tmsgFor(x,note),caseId:x.id});
+  fromUser(ph.persona,{text:tmsgFor(x,note),caseId:x.id,sys:true});
   toLine(ph.persona,{text:K('m.ack',{id:x.id})});
   ph.page='ticket';ph.ticket=x.id;adm.tab='req';adm.ticket=x.id;render();
 }
@@ -1793,7 +2066,7 @@ const A={
   pAdd(){
     const id='u'+(++S.pSeq),n=Object.keys(S.personas).length+1,hex=Math.floor(Math.random()*0xfffff).toString(16).padStart(5,'0');
     S.personas[id]={id,name:'',cls:'p'+(1+(S.pSeq%5)),line:'User'+n,uid:'U'+hex+'…'+hex.slice(0,3),phone:'',home:'T-101',first:S.clock};
-    S.chats[id]=[{from:'oa',by:'bot',text:K('m.welcome'),at:S.clock}];S.lineUnread[id]=0;S.seUnread[id]=0;S.ci[id]=blankCi();
+    S.chats[id]=[{from:'oa',by:'bot',text:K('m.welcome'),link:{page:'register',arg:'register'},at:S.clock}];S.lineUnread[id]=0;S.seUnread[id]=0;S.ci[id]=blankCi();
     setPersona(id);ph.pedit=id;ph.pdel=false;ph.perr=null;render();
   },
   pEdit(d){ph.pedit=ph.pedit===d.id?null:d.id;ph.pdel=false;ph.perr=null;renderCtrl()},
@@ -1822,7 +2095,7 @@ const A={
   persona(d){setPersona(d.id);render()},
   menu(){ph.menu=!ph.menu;renderPhone()},
   rich(d){openPage(d.p);renderPhone()},
-  scanSticker(){doScan(P(ph.persona).home);renderPhone()},
+  scanSticker(){const u=activeRoom(ph.persona);if(u){ph.liff=true;ph.room=u;ph.page='info';ph.err=null}else openPage('register');renderPhone()},
   card(d){openPage(d.p,d.arg);renderPhone()},
   liffClose(){ph.liff=false;renderPhone()},
   liffTab(d){openPage(d.p);renderPhone()},
@@ -1833,9 +2106,11 @@ const A={
   pickDay(d){ph.slotDay=+d.n;if(ph.page==='insp')ph.slot=null;const sb=document.getElementById('r-slotbox');if(sb)sb.innerHTML=slotPick(curGroup())},
   selfFixed(){ph.liff=false;now();toLine(ph.persona,{text:K('m.selfFixed')});render()},
   regSubmit(){
-    const name=val('g-name'),phone=val('g-phone'),role=val('g-role');
+    const name=val('g-name'),phone=val('g-phone'),role=val('g-role'),room=val('g-unit');
+    if(!room){ph.err=K('e.unit');return renderPhone()}
     if(!name){ph.err=K('e.name');return renderPhone()}
     if(!digits(phone)){ph.err=K('e.phone');return renderPhone()}
+    ph.room=room;ph.regProp=null;ph.regUnit=null;
     S.residents.push({id:'r'+(++S.seq.r),persona:ph.persona,room:ph.room,role,status:'pending',since:null,until:null,reqAt:now(),data:{name,phone}});
     toLine(ph.persona,{text:K('m.regSent',{n:name,r:roomK(ph.room)})});
     ph.page='pending';ph.err=null;render();
@@ -1851,18 +2126,20 @@ const A={
   repairAp(d){openPage('repair',d.id);renderPhone()},
   apSubmit(){
     const data={type:val('f-type'),brand:val('f-brand'),model:val('f-model'),year:parseInt(val('f-year'),10),loc:val('f-loc')};
+    if(data.type==='OT'){data.other=val('f-oth');if(!data.other){ph.err=K('e.other');return renderPhone()}}
     if(!data.brand||!data.model||!data.year){ph.err=K('e.req');return renderPhone()}
     if(data.year<1990||data.year>CUR_YEAR){ph.err=K('e.year',{y:CUR_YEAR});return renderPhone()}
     const kind=ph.edit?'edit':'add';
-    if(kind==='edit'){const b=AP(ph.edit);if(['type','brand','model','year','loc'].every(k=>String(b[k])===String(data[k]))){ph.err=K('e.nochange');return renderPhone()}}
+    if(kind==='edit'){const b=AP(ph.edit);if(['type','brand','model','year','loc','other'].every(k=>String(b[k]||'')===String(data[k]||''))){ph.err=K('e.nochange');return renderPhone()}}
     S.requests.push({id:'cr'+(++S.seq.cr),kind,room:ph.room,persona:ph.persona,target:ph.edit,status:'pending',at:now(),data});
     toLine(ph.persona,{text:K('m.apRecv',{act:K('act.'+kind),x:K('apx',{t:apTK(data),m:data.brand+' '+data.model})})});
-    ph.page='appliances';ph.edit=null;render();
+    ph.page='appliances';ph.edit=null;ph.fType=null;render();
   },
   repairSubmit(){
     const type=ph.rtype,title=val('r-title'),d=val('r-d');
     if(type==='app'&&!document.getElementById('r-ap'))return;
     if(!title||!d){ph.err=K('e.repair');return renderPhone()}
+    if(type==='complaint'&&val('r-topic')==='other'&&!val('r-topico')){ph.err=K('e.topic');return renderPhone()}
     const x=newTicket(type,{title,d,tech:0});
     let note=null;
     if(type==='app'){
@@ -1880,7 +2157,7 @@ const A={
         }
       }
     }else if(DISP[type]){x.slot=ph.slot}
-    else if(type==='complaint'){x.topic=val('r-topic');x.where=val('r-where');x.when=val('r-when');x.anon=document.getElementById('r-anon').checked;if(x.anon)note=K('tmsg.anon')}
+    else if(type==='complaint'){x.topic=val('r-topic');if(x.topic==='other')x.topicText=val('r-topico');ph.ctopic=null;x.where=val('r-where');x.when=val('r-when');x.anon=document.getElementById('r-anon').checked;if(x.anon)note=K('tmsg.anon')}
     else if(type==='common'){x.where=val('r-where')}
     if(x.slot!=null){x.grp=grpOf(type,x.ap);bookSlot(x.grp,x.slot)}
     ph.slot='asap';
@@ -1924,7 +2201,7 @@ const A={
     const text=val('irf-a'),files=(ph.irFiles||[]).slice();
     if(!text&&!files.length){ph.err=K('irf.err');return renderPhone()}
     /* the answer reaches the OA as a LINE message, so it gets its own SE ticket linked to this case */
-    fromUser(ph.persona,{text:K('m.irAns',{id:x.id,x:text||K('files',{n:files.length})}),caseId:x.id});
+    fromUser(ph.persona,{text:K('m.irAns',{id:x.id,x:text||K('files',{n:files.length})}),caseId:x.id,sys:true});
     const st=S.seTickets[S.seTickets.length-1],at=S.clock;r.ans={text,files,at,se:st.no};
     x.last=at;x.unread=true;x.log.push({k:'irAns',x:text+(files.length?` (${t('files',{n:files.length})})`:''),at});
     if(x.status==='waiting'&&x.ir.every(q=>q.ans)){x.status='replied';x.log.push({k:'status',s:'replied',at,by:'res'})}
@@ -2030,6 +2307,10 @@ const A={
   chatView(d){adm.tab='chats';adm.chat=d.no;adm.nc=null;renderAdmin()},
   chatDismiss(d){const st=seOf(d.no);if(st)st.seen=true;renderAdmin()},
   selChat(d){adm.chat=d.no;renderAdmin()},
+  admView(d){adm.view=d.v;renderAdmin()},
+  bellToggle(){adm.bell=!adm.bell;if(adm.bell){const me=+adm.techId,n=techNotes();adm.bellNew=n.asg.map(x=>x.id);adm.seen[me]=[...(adm.seen[me]||[]),...n.asg.map(x=>'a:'+x.id),...n.soon.map(o=>'u:'+o.x.id)]}renderAdmin()},
+  bellGo(d){adm.bell=false;adm.tab='req';adm.ticket=d.id;adm.nc=null;renderAdmin()},
+  fold(d){adm.fold=adm.fold||{};adm.fold[d.k]=!adm.fold[d.k];renderAdmin()},
   chatTab(d){adm.chatTab=d.t;adm.chat=null;renderAdmin()},
   reqTab(d){adm.reqTab=d.t;adm.ticket=null;adm.nc=null;renderAdmin()},
   warWin(d){adm.warWin=+d.n;renderAdmin()},
@@ -2046,6 +2327,12 @@ const A={
   },
   schedBook(d){adm.nc={prop:'O',unit:null,caller:null,type:G2TYPE[d.g],ap:null,slot:d.s};adm.tab='req';adm.err=null;renderAdmin()},
   schedDay(d){adm.schedDay=+d.n;renderAdmin()},
+  schedMode(d){adm.schedMode=d.m;renderAdmin()},
+  schedMon(d){adm.schedMon=+d.n===0?0:(adm.schedMon||0)+(+d.n);renderAdmin()},
+  schedDate(d){const ts=+d.ts,off=Math.round((ts-sod(S.clock))/864e5);if(DAYS.includes(off))adm.schedDay=off;const ins=INS_DAYS.find(x=>sod(x)===ts);if(ins)adm.insDay=ins;adm.schedMode='hour';renderAdmin()},
+  dashWin(d){adm.dashWin=d.n;renderAdmin()},
+  repQuick(d){const T=sod(S.clock);if(d.n==='m'){const b=new Date(T);b.setDate(1);adm.rpFrom=b.getTime()}else adm.rpFrom=T-(+d.n-1)*864e5;adm.rpTo=T;adm.rpMsg=null;renderAdmin()},
+  repExport(d){const r=repRows(),f=`zanroo-requests_${ymd(adm.rpFrom)}_${ymd(adm.rpTo)}.${d.f}`;adm.rpMsg=t('rep.ready',{f,n:r.length});renderAdmin()},
   schedIns(d){adm.insDay=+d.n;renderAdmin()},
   /* case search (admin web) and ticket search (Social Engagement) */
   aSearch(){adm.q=val('a-q');adm.tab='req';adm.nc=null;adm.ticket=null;renderAdmin()},
@@ -2064,7 +2351,7 @@ const A={
   callEnd(){ph.call=null;clearInterval(ph.callT);renderPhone()}
 };
 function saveQr(){const ins=[...document.querySelectorAll('.qredit input')];if(ins.length)S.qr=ins.map((i,n)=>i.value===L(S.qr[n])?S.qr[n]:i.value).filter(v=>L(v).trim())}
-function pick(d){return {type:d.type,brand:d.brand,model:d.model,year:d.year,loc:d.loc}}
+function pick(d){return {type:d.type,brand:d.brand,model:d.model,year:d.year,loc:d.loc,other:d.type==='OT'?d.other:undefined}}
 
 document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!el||el.disabled)return;const f=A[el.dataset.a];if(f){e.preventDefault();f(el.dataset,el)}});
 document.addEventListener('keydown',e=>{if(e.key!=='Enter'||e.isComposing)return;const id=e.target.id;
@@ -2080,6 +2367,10 @@ document.addEventListener('change',e=>{
     });
     const pv=document.getElementById('irf-prev');if(pv)pv.innerHTML=fileList(ph.irFiles);e.target.value='';
   }
+  else if(id==='f-type'){ph.fType=e.target.value;renderPhone()}
+  else if(id==='r-topic'){ph.ctopic=e.target.value;const o=document.getElementById('r-topico');if(o)o.hidden=e.target.value!=='other'}
+  else if(id==='g-prop'){ph.regProp=e.target.value;ph.regUnit='';ph.err=null;renderPhone()}
+  else if(id==='g-unit'){ph.regUnit=e.target.value;ph.err=null;renderPhone()}
   else if(id==='se-role'){se.role=e.target.value;render()}
   else if(id==='a-role'){adm.role=e.target.value;if(adm.role==='tech'&&!adm.techId)adm.techId=6;adm.nc=null;renderAdmin()}
   else if(id==='a-techid'){adm.techId=+e.target.value;renderAdmin()}
@@ -2089,6 +2380,8 @@ document.addEventListener('change',e=>{
   else if(id==='se-agent'){const st=seLatest(se.conv);if(st)st.agent=e.target.value||null;render()}
   else if(adm.nc&&['n-prop','n-unit','n-type','n-caller','n-ap'].includes(id)){adm.nc.title=val('n-title');adm.nc.d=val('n-d');adm.nc[id.slice(2)]=e.target.value;if(id==='n-prop')adm.nc.unit=null;if(id==='n-unit')adm.nc.caller=null;renderAdmin()}
   else if(id==='r-upd'){document.getElementById('r-updf').hidden=!e.target.checked}
+  else if(id==='rp-from'||id==='rp-to'){const v=e.target.value;if(v){const [y,m,dd]=v.split('-').map(Number);adm[id==='rp-from'?'rpFrom':'rpTo']=new Date(y,m-1,dd).getTime()}adm.rpMsg=null;renderAdmin()}
+  else if(id==='rp-prop'||id==='rp-type'){adm[id==='rp-prop'?'rpProp':'rpType']=e.target.value;adm.rpMsg=null;renderAdmin()}
   else if(id==='a-f'){adm.reqF=e.target.value;adm.ticket=null;renderAdmin()}
   else if(id==='ac-f'){adm.chatF=e.target.value;adm.chat=null;renderAdmin()}
   else if(id==='n-type'&&!adm.nc){adm.newType=e.target.value;renderAdmin()}
